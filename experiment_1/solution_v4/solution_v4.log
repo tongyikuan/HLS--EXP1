@@ -1,0 +1,529 @@
+==============================================================
+File generated on Tue Nov 03 21:04:17 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../matmul_gui/matmul.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 103.090 ; gain = 17.727
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 103.090 ; gain = 17.727
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 104.484 ; gain = 19.121
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 104.746 ; gain = 19.383
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'J' (../matmul_gui/matmul.cpp:31) in function 'matmul_core' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'K' (../matmul_gui/matmul.cpp:34) in function 'matmul_core' completely with a factor of 32.
+INFO: [XFORM 203-101] Partitioning array 'A_local' (../matmul_gui/matmul.cpp:59) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'B_local' (../matmul_gui/matmul.cpp:60) in dimension 1 completely.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[0]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[1]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[2]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[3]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[4]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[5]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[6]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[7]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[8]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[9]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[10]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[11]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[12]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[13]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[14]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[15]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[16]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[17]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[18]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[19]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[20]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[21]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[22]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[23]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[24]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[25]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[26]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[27]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[28]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[29]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[30]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'A_local[31]' should be updated in process function 'load_A', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] Reading dataflow channel 'B' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'B' has read operations in process function 'load_B'.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[0]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[1]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[2]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[3]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[4]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[5]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[6]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[7]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[8]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[9]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[10]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[11]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[12]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[13]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[14]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[15]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[16]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[17]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[18]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[19]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[20]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[21]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[22]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[23]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[24]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[25]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[26]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[27]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[28]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[29]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[30]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[31]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'matmul_top', detected/extracted 4 process function(s): 
+	 'load_A'
+	 'load_B'
+	 'matmul_core'
+	 'store'.
+INFO: [XFORM 203-11] Balancing expressions in function 'matmul_core' (../matmul_gui/matmul.cpp:29)...31 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 128.266 ; gain = 42.902
+INFO: [XFORM 203-541] Flattening a loop nest 'I' (../matmul_gui/matmul.cpp:30:33) in function 'matmul_core'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:10 ; elapsed = 00:00:16 . Memory (MB): peak = 161.043 ; gain = 75.680
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matmul_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_A' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 16.058 seconds; current allocated memory: 119.896 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.128 seconds; current allocated memory: 120.499 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_B' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.164 seconds; current allocated memory: 120.907 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.136 seconds; current allocated memory: 121.467 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'I_J'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.419 seconds; current allocated memory: 122.293 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.247 seconds; current allocated memory: 123.194 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.406 seconds; current allocated memory: 123.389 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.105 seconds; current allocated memory: 123.479 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.075 seconds; current allocated memory: 123.670 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.385 seconds; current allocated memory: 124.025 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_A' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_A'.
+INFO: [HLS 200-111]  Elapsed time: 0.354 seconds; current allocated memory: 124.762 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_B' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_B'.
+INFO: [HLS 200-111]  Elapsed time: 0.363 seconds; current allocated memory: 125.599 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_core'.
+INFO: [HLS 200-111]  Elapsed time: 0.328 seconds; current allocated memory: 127.183 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store'.
+INFO: [HLS 200-111]  Elapsed time: 0.928 seconds; current allocated memory: 127.961 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matmul_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_0' to 'matmul_top_A_locabkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_1' to 'matmul_top_A_locacud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_2' to 'matmul_top_A_locadEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_3' to 'matmul_top_A_locaeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_4' to 'matmul_top_A_locafYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_5' to 'matmul_top_A_locag8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_6' to 'matmul_top_A_locahbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_7' to 'matmul_top_A_locaibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_8' to 'matmul_top_A_locajbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_9' to 'matmul_top_A_locakbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_10' to 'matmul_top_A_localbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_11' to 'matmul_top_A_locamb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_12' to 'matmul_top_A_locancg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_13' to 'matmul_top_A_locaocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_14' to 'matmul_top_A_locapcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_15' to 'matmul_top_A_locaqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_16' to 'matmul_top_A_locarcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_17' to 'matmul_top_A_locasc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_18' to 'matmul_top_A_locatde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_19' to 'matmul_top_A_locaudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_20' to 'matmul_top_A_locavdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_21' to 'matmul_top_A_locawdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_22' to 'matmul_top_A_locaxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_23' to 'matmul_top_A_locayd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_24' to 'matmul_top_A_locazec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_25' to 'matmul_top_A_locaAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_26' to 'matmul_top_A_locaBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_27' to 'matmul_top_A_locaCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_28' to 'matmul_top_A_locaDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_29' to 'matmul_top_A_locaEe0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_30' to 'matmul_top_A_locaFfa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_31' to 'matmul_top_A_locaGfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_0' to 'matmul_top_B_locaHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_1' to 'matmul_top_B_locaIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_2' to 'matmul_top_B_locaJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_3' to 'matmul_top_B_locaKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_4' to 'matmul_top_B_locaLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_5' to 'matmul_top_B_locaMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_6' to 'matmul_top_B_locaNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_7' to 'matmul_top_B_locaOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_8' to 'matmul_top_B_locaPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_9' to 'matmul_top_B_locaQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_10' to 'matmul_top_B_locaRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_11' to 'matmul_top_B_locaShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_12' to 'matmul_top_B_locaThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_13' to 'matmul_top_B_locaUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_14' to 'matmul_top_B_locaVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_15' to 'matmul_top_B_locaWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_16' to 'matmul_top_B_locaXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_17' to 'matmul_top_B_locaYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_18' to 'matmul_top_B_locaZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_19' to 'matmul_top_B_loca0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_20' to 'matmul_top_B_loca1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_21' to 'matmul_top_B_loca2iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_22' to 'matmul_top_B_loca3i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_23' to 'matmul_top_B_loca4jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_24' to 'matmul_top_B_loca5jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_25' to 'matmul_top_B_loca6jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_26' to 'matmul_top_B_loca7jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_27' to 'matmul_top_B_loca8jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_28' to 'matmul_top_B_loca9j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_29' to 'matmul_top_B_locabak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_30' to 'matmul_top_B_locabbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_31' to 'matmul_top_B_locabck' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_top'.
+INFO: [HLS 200-111]  Elapsed time: 1.409 seconds; current allocated memory: 134.736 MB.
+INFO: [RTMG 210-278] Implementing memory 'matmul_top_A_locabkb_memcore_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matmul_top_C_local_memcore_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 199.020 ; gain = 113.656
+INFO: [SYSC 207-301] Generating SystemC RTL for matmul_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matmul_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matmul_top.
+INFO: [HLS 200-112] Total elapsed time: 24.045 seconds; peak allocated memory: 134.736 MB.
+==============================================================
+File generated on Tue Nov 03 21:08:40 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../matmul_gui/matmul.cpp' ... 
+ERROR: [HLS 200-70] Compilation errors found: In file included from ../matmul_gui/matmul.cpp:1:
+../matmul_gui/matmul.cpp:9:6: error: variable has incomplete type 'void'
+void load_A(data_t A[N][N], data_t A_local[N][N]) {
+     ^
+../matmul_gui/matmul.cpp:9:13: error: use of undeclared identifier 'data_t'
+void load_A(data_t A[N][N], data_t A_local[N][N]) {
+            ^
+../matmul_gui/matmul.cpp:9:50: error: expected ';' after top level declarator
+void load_A(data_t A[N][N], data_t A_local[N][N]) {
+                                                 ^
+                                                 ;
+3 errors generated.
+==============================================================
+File generated on Tue Nov 03 21:09:46 +0800 2026
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2018.3 (64-bit)
+SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file '../matmul_gui/matmul.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 103.035 ; gain = 17.996
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 103.035 ; gain = 17.996
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 104.410 ; gain = 19.371
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 104.664 ; gain = 19.625
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (../matmul_gui/matmul.cpp:47) in function 'store' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'J' (../matmul_gui/matmul.cpp:33) in function 'matmul_core' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (../matmul_gui/matmul.cpp:22) in function 'load_B' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (../matmul_gui/matmul.cpp:12) in function 'load_A' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (../matmul_gui/matmul.cpp:49) in function 'store' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'K' (../matmul_gui/matmul.cpp:36) in function 'matmul_core' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (../matmul_gui/matmul.cpp:24) in function 'load_B' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (../matmul_gui/matmul.cpp:14) in function 'load_A' completely with a factor of 32.
+INFO: [XFORM 203-101] Partitioning array 'A_local' (../matmul_gui/matmul.cpp:58) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'B_local' (../matmul_gui/matmul.cpp:59) in dimension 1 completely.
+WARNING: [XFORM 203-713] Reading dataflow channel 'B' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'B' has read operations in process function 'load_B'.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[0]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[1]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[2]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[3]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[4]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[5]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[6]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[7]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[8]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[9]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[10]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[11]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[12]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[13]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[14]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[15]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[16]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[17]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[18]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[19]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[20]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[21]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[22]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[23]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[24]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[25]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[26]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[27]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[28]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[29]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[30]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[31]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'matmul_top', detected/extracted 4 process function(s): 
+	 'load_A'
+	 'load_B'
+	 'matmul_core'
+	 'store'.
+INFO: [XFORM 203-11] Balancing expressions in function 'matmul_core' (../matmul_gui/matmul.cpp:31)...31 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 133.191 ; gain = 48.152
+INFO: [XFORM 203-541] Flattening a loop nest 'I' (../matmul_gui/matmul.cpp:32:33) in function 'matmul_core'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 186.555 ; gain = 101.516
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'matmul_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_A' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_2', ../matmul_gui/matmul.cpp:15) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 17.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.191 seconds; current allocated memory: 141.108 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.086 seconds; current allocated memory: 141.786 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_B' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_2', ../matmul_gui/matmul.cpp:25) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 17.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 1.066 seconds; current allocated memory: 146.500 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.758 seconds; current allocated memory: 152.970 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'I_J'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.724 seconds; current allocated memory: 153.796 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.125 seconds; current allocated memory: 154.697 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('C_local_load_2', ../matmul_gui/matmul.cpp:50) on array 'C_local' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'C_local'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 17.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.228 seconds; current allocated memory: 155.275 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.092 seconds; current allocated memory: 155.911 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.096 seconds; current allocated memory: 156.102 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 156.472 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_A' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_A'.
+INFO: [HLS 200-111]  Elapsed time: 0.192 seconds; current allocated memory: 157.943 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_B' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_B'.
+INFO: [HLS 200-111]  Elapsed time: 0.519 seconds; current allocated memory: 164.620 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_core'.
+INFO: [HLS 200-111]  Elapsed time: 1.495 seconds; current allocated memory: 167.451 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 169.124 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matmul_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_0' to 'matmul_top_A_locabkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_1' to 'matmul_top_A_locacud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_2' to 'matmul_top_A_locadEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_3' to 'matmul_top_A_locaeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_4' to 'matmul_top_A_locafYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_5' to 'matmul_top_A_locag8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_6' to 'matmul_top_A_locahbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_7' to 'matmul_top_A_locaibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_8' to 'matmul_top_A_locajbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_9' to 'matmul_top_A_locakbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_10' to 'matmul_top_A_localbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_11' to 'matmul_top_A_locamb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_12' to 'matmul_top_A_locancg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_13' to 'matmul_top_A_locaocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_14' to 'matmul_top_A_locapcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_15' to 'matmul_top_A_locaqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_16' to 'matmul_top_A_locarcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_17' to 'matmul_top_A_locasc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_18' to 'matmul_top_A_locatde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_19' to 'matmul_top_A_locaudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_20' to 'matmul_top_A_locavdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_21' to 'matmul_top_A_locawdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_22' to 'matmul_top_A_locaxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_23' to 'matmul_top_A_locayd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_24' to 'matmul_top_A_locazec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_25' to 'matmul_top_A_locaAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_26' to 'matmul_top_A_locaBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_27' to 'matmul_top_A_locaCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_28' to 'matmul_top_A_locaDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_29' to 'matmul_top_A_locaEe0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_30' to 'matmul_top_A_locaFfa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_31' to 'matmul_top_A_locaGfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_0' to 'matmul_top_B_locaHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_1' to 'matmul_top_B_locaIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_2' to 'matmul_top_B_locaJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_3' to 'matmul_top_B_locaKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_4' to 'matmul_top_B_locaLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_5' to 'matmul_top_B_locaMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_6' to 'matmul_top_B_locaNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_7' to 'matmul_top_B_locaOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_8' to 'matmul_top_B_locaPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_9' to 'matmul_top_B_locaQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_10' to 'matmul_top_B_locaRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_11' to 'matmul_top_B_locaShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_12' to 'matmul_top_B_locaThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_13' to 'matmul_top_B_locaUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_14' to 'matmul_top_B_locaVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_15' to 'matmul_top_B_locaWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_16' to 'matmul_top_B_locaXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_17' to 'matmul_top_B_locaYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_18' to 'matmul_top_B_locaZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_19' to 'matmul_top_B_loca0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_20' to 'matmul_top_B_loca1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_21' to 'matmul_top_B_loca2iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_22' to 'matmul_top_B_loca3i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_23' to 'matmul_top_B_loca4jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_24' to 'matmul_top_B_loca5jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_25' to 'matmul_top_B_loca6jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_26' to 'matmul_top_B_loca7jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_27' to 'matmul_top_B_loca8jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_28' to 'matmul_top_B_loca9j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_29' to 'matmul_top_B_locabak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_30' to 'matmul_top_B_locabbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_31' to 'matmul_top_B_locabck' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_top'.
+INFO: [HLS 200-111]  Elapsed time: 0.867 seconds; current allocated memory: 177.007 MB.
+INFO: [RTMG 210-278] Implementing memory 'matmul_top_A_locabkb_memcore_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matmul_top_B_locaHfu_memcore_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matmul_top_C_local_memcore_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 276.555 ; gain = 191.516
+INFO: [SYSC 207-301] Generating SystemC RTL for matmul_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matmul_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matmul_top.
+INFO: [HLS 200-112] Total elapsed time: 19.618 seconds; peak allocated memory: 177.007 MB.

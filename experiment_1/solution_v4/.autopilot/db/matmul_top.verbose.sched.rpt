@@ -1,0 +1,223 @@
+
+
+================================================================
+== Vivado HLS Report for 'matmul_top'
+================================================================
+* Date:           Tue Nov  3 21:10:00 2026
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        experiment_1
+* Solution:       solution_v4
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.470|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+----------+
+    |   Latency   |   Interval  | Pipeline |
+    |  min |  max |  min |  max |   Type   |
+    +------+------+------+------+----------+
+    |  2061|  2061|  1032|  1032| dataflow |
+    +------+------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 6, States = { 1 2 3 4 5 6 }
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%A_local_0 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 7 'alloca' 'A_local_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%A_local_1 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 8 'alloca' 'A_local_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%A_local_2 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 9 'alloca' 'A_local_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%A_local_3 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 10 'alloca' 'A_local_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%A_local_4 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 11 'alloca' 'A_local_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%A_local_5 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 12 'alloca' 'A_local_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%A_local_6 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 13 'alloca' 'A_local_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%A_local_7 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 14 'alloca' 'A_local_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%A_local_8 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 15 'alloca' 'A_local_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%A_local_9 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 16 'alloca' 'A_local_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%A_local_10 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 17 'alloca' 'A_local_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%A_local_11 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 18 'alloca' 'A_local_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%A_local_12 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 19 'alloca' 'A_local_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%A_local_13 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 20 'alloca' 'A_local_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%A_local_14 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 21 'alloca' 'A_local_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%A_local_15 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 22 'alloca' 'A_local_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%A_local_16 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 23 'alloca' 'A_local_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%A_local_17 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 24 'alloca' 'A_local_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%A_local_18 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 25 'alloca' 'A_local_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%A_local_19 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 26 'alloca' 'A_local_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%A_local_20 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 27 'alloca' 'A_local_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%A_local_21 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 28 'alloca' 'A_local_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%A_local_22 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 29 'alloca' 'A_local_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%A_local_23 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 30 'alloca' 'A_local_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%A_local_24 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 31 'alloca' 'A_local_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%A_local_25 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 32 'alloca' 'A_local_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%A_local_26 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 33 'alloca' 'A_local_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%A_local_27 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 34 'alloca' 'A_local_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%A_local_28 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 35 'alloca' 'A_local_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%A_local_29 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 36 'alloca' 'A_local_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%A_local_30 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 37 'alloca' 'A_local_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%A_local_31 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:58]   --->   Operation 38 'alloca' 'A_local_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%B_local_0 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 39 'alloca' 'B_local_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%B_local_1 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 40 'alloca' 'B_local_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%B_local_2 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 41 'alloca' 'B_local_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%B_local_3 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 42 'alloca' 'B_local_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%B_local_4 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 43 'alloca' 'B_local_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%B_local_5 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 44 'alloca' 'B_local_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%B_local_6 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 45 'alloca' 'B_local_6' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%B_local_7 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 46 'alloca' 'B_local_7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%B_local_8 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 47 'alloca' 'B_local_8' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%B_local_9 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 48 'alloca' 'B_local_9' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%B_local_10 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 49 'alloca' 'B_local_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%B_local_11 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 50 'alloca' 'B_local_11' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%B_local_12 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 51 'alloca' 'B_local_12' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%B_local_13 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 52 'alloca' 'B_local_13' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%B_local_14 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 53 'alloca' 'B_local_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%B_local_15 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 54 'alloca' 'B_local_15' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%B_local_16 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 55 'alloca' 'B_local_16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%B_local_17 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 56 'alloca' 'B_local_17' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%B_local_18 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 57 'alloca' 'B_local_18' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%B_local_19 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 58 'alloca' 'B_local_19' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%B_local_20 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 59 'alloca' 'B_local_20' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%B_local_21 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 60 'alloca' 'B_local_21' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%B_local_22 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 61 'alloca' 'B_local_22' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%B_local_23 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 62 'alloca' 'B_local_23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%B_local_24 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 63 'alloca' 'B_local_24' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "%B_local_25 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 64 'alloca' 'B_local_25' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "%B_local_26 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 65 'alloca' 'B_local_26' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "%B_local_27 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 66 'alloca' 'B_local_27' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "%B_local_28 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 67 'alloca' 'B_local_28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (0.00ns)   --->   "%B_local_29 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 68 'alloca' 'B_local_29' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 69 [1/1] (0.00ns)   --->   "%B_local_30 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 69 'alloca' 'B_local_30' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 70 [1/1] (0.00ns)   --->   "%B_local_31 = alloca [32 x i32], align 4" [../matmul_gui/matmul.cpp:59]   --->   Operation 70 'alloca' 'B_local_31' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 71 [1/1] (0.00ns)   --->   "%C_local = alloca [1024 x i32], align 4" [../matmul_gui/matmul.cpp:60]   --->   Operation 71 'alloca' 'C_local' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 72 [2/2] (0.00ns)   --->   "call fastcc void @load_A([1024 x i32]* %A, [32 x i32]* %A_local_0, [32 x i32]* %A_local_1, [32 x i32]* %A_local_2, [32 x i32]* %A_local_3, [32 x i32]* %A_local_4, [32 x i32]* %A_local_5, [32 x i32]* %A_local_6, [32 x i32]* %A_local_7, [32 x i32]* %A_local_8, [32 x i32]* %A_local_9, [32 x i32]* %A_local_10, [32 x i32]* %A_local_11, [32 x i32]* %A_local_12, [32 x i32]* %A_local_13, [32 x i32]* %A_local_14, [32 x i32]* %A_local_15, [32 x i32]* %A_local_16, [32 x i32]* %A_local_17, [32 x i32]* %A_local_18, [32 x i32]* %A_local_19, [32 x i32]* %A_local_20, [32 x i32]* %A_local_21, [32 x i32]* %A_local_22, [32 x i32]* %A_local_23, [32 x i32]* %A_local_24, [32 x i32]* %A_local_25, [32 x i32]* %A_local_26, [32 x i32]* %A_local_27, [32 x i32]* %A_local_28, [32 x i32]* %A_local_29, [32 x i32]* %A_local_30, [32 x i32]* %A_local_31) nounwind" [../matmul_gui/matmul.cpp:65]   --->   Operation 72 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_1 : Operation 73 [2/2] (0.00ns)   --->   "call fastcc void @load_B([1024 x i32]* %B, [32 x i32]* %B_local_0, [32 x i32]* %B_local_1, [32 x i32]* %B_local_2, [32 x i32]* %B_local_3, [32 x i32]* %B_local_4, [32 x i32]* %B_local_5, [32 x i32]* %B_local_6, [32 x i32]* %B_local_7, [32 x i32]* %B_local_8, [32 x i32]* %B_local_9, [32 x i32]* %B_local_10, [32 x i32]* %B_local_11, [32 x i32]* %B_local_12, [32 x i32]* %B_local_13, [32 x i32]* %B_local_14, [32 x i32]* %B_local_15, [32 x i32]* %B_local_16, [32 x i32]* %B_local_17, [32 x i32]* %B_local_18, [32 x i32]* %B_local_19, [32 x i32]* %B_local_20, [32 x i32]* %B_local_21, [32 x i32]* %B_local_22, [32 x i32]* %B_local_23, [32 x i32]* %B_local_24, [32 x i32]* %B_local_25, [32 x i32]* %B_local_26, [32 x i32]* %B_local_27, [32 x i32]* %B_local_28, [32 x i32]* %B_local_29, [32 x i32]* %B_local_30, [32 x i32]* %B_local_31) nounwind" [../matmul_gui/matmul.cpp:66]   --->   Operation 73 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 74 [1/2] (0.00ns)   --->   "call fastcc void @load_A([1024 x i32]* %A, [32 x i32]* %A_local_0, [32 x i32]* %A_local_1, [32 x i32]* %A_local_2, [32 x i32]* %A_local_3, [32 x i32]* %A_local_4, [32 x i32]* %A_local_5, [32 x i32]* %A_local_6, [32 x i32]* %A_local_7, [32 x i32]* %A_local_8, [32 x i32]* %A_local_9, [32 x i32]* %A_local_10, [32 x i32]* %A_local_11, [32 x i32]* %A_local_12, [32 x i32]* %A_local_13, [32 x i32]* %A_local_14, [32 x i32]* %A_local_15, [32 x i32]* %A_local_16, [32 x i32]* %A_local_17, [32 x i32]* %A_local_18, [32 x i32]* %A_local_19, [32 x i32]* %A_local_20, [32 x i32]* %A_local_21, [32 x i32]* %A_local_22, [32 x i32]* %A_local_23, [32 x i32]* %A_local_24, [32 x i32]* %A_local_25, [32 x i32]* %A_local_26, [32 x i32]* %A_local_27, [32 x i32]* %A_local_28, [32 x i32]* %A_local_29, [32 x i32]* %A_local_30, [32 x i32]* %A_local_31) nounwind" [../matmul_gui/matmul.cpp:65]   --->   Operation 74 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 75 [1/2] (0.00ns)   --->   "call fastcc void @load_B([1024 x i32]* %B, [32 x i32]* %B_local_0, [32 x i32]* %B_local_1, [32 x i32]* %B_local_2, [32 x i32]* %B_local_3, [32 x i32]* %B_local_4, [32 x i32]* %B_local_5, [32 x i32]* %B_local_6, [32 x i32]* %B_local_7, [32 x i32]* %B_local_8, [32 x i32]* %B_local_9, [32 x i32]* %B_local_10, [32 x i32]* %B_local_11, [32 x i32]* %B_local_12, [32 x i32]* %B_local_13, [32 x i32]* %B_local_14, [32 x i32]* %B_local_15, [32 x i32]* %B_local_16, [32 x i32]* %B_local_17, [32 x i32]* %B_local_18, [32 x i32]* %B_local_19, [32 x i32]* %B_local_20, [32 x i32]* %B_local_21, [32 x i32]* %B_local_22, [32 x i32]* %B_local_23, [32 x i32]* %B_local_24, [32 x i32]* %B_local_25, [32 x i32]* %B_local_26, [32 x i32]* %B_local_27, [32 x i32]* %B_local_28, [32 x i32]* %B_local_29, [32 x i32]* %B_local_30, [32 x i32]* %B_local_31) nounwind" [../matmul_gui/matmul.cpp:66]   --->   Operation 75 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 76 [2/2] (0.00ns)   --->   "call fastcc void @matmul_core([32 x i32]* %A_local_0, [32 x i32]* %A_local_1, [32 x i32]* %A_local_2, [32 x i32]* %A_local_3, [32 x i32]* %A_local_4, [32 x i32]* %A_local_5, [32 x i32]* %A_local_6, [32 x i32]* %A_local_7, [32 x i32]* %A_local_8, [32 x i32]* %A_local_9, [32 x i32]* %A_local_10, [32 x i32]* %A_local_11, [32 x i32]* %A_local_12, [32 x i32]* %A_local_13, [32 x i32]* %A_local_14, [32 x i32]* %A_local_15, [32 x i32]* %A_local_16, [32 x i32]* %A_local_17, [32 x i32]* %A_local_18, [32 x i32]* %A_local_19, [32 x i32]* %A_local_20, [32 x i32]* %A_local_21, [32 x i32]* %A_local_22, [32 x i32]* %A_local_23, [32 x i32]* %A_local_24, [32 x i32]* %A_local_25, [32 x i32]* %A_local_26, [32 x i32]* %A_local_27, [32 x i32]* %A_local_28, [32 x i32]* %A_local_29, [32 x i32]* %A_local_30, [32 x i32]* %A_local_31, [32 x i32]* %B_local_0, [32 x i32]* %B_local_1, [32 x i32]* %B_local_2, [32 x i32]* %B_local_3, [32 x i32]* %B_local_4, [32 x i32]* %B_local_5, [32 x i32]* %B_local_6, [32 x i32]* %B_local_7, [32 x i32]* %B_local_8, [32 x i32]* %B_local_9, [32 x i32]* %B_local_10, [32 x i32]* %B_local_11, [32 x i32]* %B_local_12, [32 x i32]* %B_local_13, [32 x i32]* %B_local_14, [32 x i32]* %B_local_15, [32 x i32]* %B_local_16, [32 x i32]* %B_local_17, [32 x i32]* %B_local_18, [32 x i32]* %B_local_19, [32 x i32]* %B_local_20, [32 x i32]* %B_local_21, [32 x i32]* %B_local_22, [32 x i32]* %B_local_23, [32 x i32]* %B_local_24, [32 x i32]* %B_local_25, [32 x i32]* %B_local_26, [32 x i32]* %B_local_27, [32 x i32]* %B_local_28, [32 x i32]* %B_local_29, [32 x i32]* %B_local_30, [32 x i32]* %B_local_31, [1024 x i32]* %C_local) nounwind" [../matmul_gui/matmul.cpp:67]   --->   Operation 76 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 77 [1/2] (0.00ns)   --->   "call fastcc void @matmul_core([32 x i32]* %A_local_0, [32 x i32]* %A_local_1, [32 x i32]* %A_local_2, [32 x i32]* %A_local_3, [32 x i32]* %A_local_4, [32 x i32]* %A_local_5, [32 x i32]* %A_local_6, [32 x i32]* %A_local_7, [32 x i32]* %A_local_8, [32 x i32]* %A_local_9, [32 x i32]* %A_local_10, [32 x i32]* %A_local_11, [32 x i32]* %A_local_12, [32 x i32]* %A_local_13, [32 x i32]* %A_local_14, [32 x i32]* %A_local_15, [32 x i32]* %A_local_16, [32 x i32]* %A_local_17, [32 x i32]* %A_local_18, [32 x i32]* %A_local_19, [32 x i32]* %A_local_20, [32 x i32]* %A_local_21, [32 x i32]* %A_local_22, [32 x i32]* %A_local_23, [32 x i32]* %A_local_24, [32 x i32]* %A_local_25, [32 x i32]* %A_local_26, [32 x i32]* %A_local_27, [32 x i32]* %A_local_28, [32 x i32]* %A_local_29, [32 x i32]* %A_local_30, [32 x i32]* %A_local_31, [32 x i32]* %B_local_0, [32 x i32]* %B_local_1, [32 x i32]* %B_local_2, [32 x i32]* %B_local_3, [32 x i32]* %B_local_4, [32 x i32]* %B_local_5, [32 x i32]* %B_local_6, [32 x i32]* %B_local_7, [32 x i32]* %B_local_8, [32 x i32]* %B_local_9, [32 x i32]* %B_local_10, [32 x i32]* %B_local_11, [32 x i32]* %B_local_12, [32 x i32]* %B_local_13, [32 x i32]* %B_local_14, [32 x i32]* %B_local_15, [32 x i32]* %B_local_16, [32 x i32]* %B_local_17, [32 x i32]* %B_local_18, [32 x i32]* %B_local_19, [32 x i32]* %B_local_20, [32 x i32]* %B_local_21, [32 x i32]* %B_local_22, [32 x i32]* %B_local_23, [32 x i32]* %B_local_24, [32 x i32]* %B_local_25, [32 x i32]* %B_local_26, [32 x i32]* %B_local_27, [32 x i32]* %B_local_28, [32 x i32]* %B_local_29, [32 x i32]* %B_local_30, [32 x i32]* %B_local_31, [1024 x i32]* %C_local) nounwind" [../matmul_gui/matmul.cpp:67]   --->   Operation 77 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 78 [2/2] (0.00ns)   --->   "call fastcc void @store([1024 x i32]* %C_local, [1024 x i32]* %C) nounwind" [../matmul_gui/matmul.cpp:68]   --->   Operation 78 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str1) nounwind" [../matmul_gui/matmul.cpp:57]   --->   Operation 79 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 80 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %A) nounwind, !map !19"   --->   Operation 80 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %B) nounwind, !map !25"   --->   Operation 81 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %C) nounwind, !map !29"   --->   Operation 82 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 83 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @matmul_top_str) nounwind"   --->   Operation 83 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 84 [1/2] (0.00ns)   --->   "call fastcc void @store([1024 x i32]* %C_local, [1024 x i32]* %C) nounwind" [../matmul_gui/matmul.cpp:68]   --->   Operation 84 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "ret void" [../matmul_gui/matmul.cpp:69]   --->   Operation 85 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

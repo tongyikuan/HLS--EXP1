@@ -1,0 +1,778 @@
+INFO-FLOW: Workspace D:/experiment_class/experiment_1/experiment_1/solution_v4 opened at Tue Nov 03 21:09:46 +0800 2026
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7_fpv6 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7_hp.hlp 
+Execute     source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7a100tcsg324-1 
+Execute       add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7a100t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/artix7/artix7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7a100tcsg324-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.141 sec.
+Execute   set_part xc7a100tcsg324-1 
+Execute     add_library xilinx/artix7/artix7:xc7a100t:csg324:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7a100t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 15850} {LUT 63400}     {FF 126800} {DSP48E 240}    {BRAM 270}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/artix7/artix7_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file '../matmul_gui/matmul.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ../matmul_gui/matmul.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted ../matmul_gui/matmul.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "../matmul_gui/matmul.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E ../matmul_gui/matmul.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp
+Command       clang done; 0.689 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.208 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/Xilinx/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp"  -o "D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/useless.bc
+Command       clang done; 0.649 sec.
+INFO-FLOW: Done: GCC PP time: 1.5 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp std=gnu++98 -directive=D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/.systemc_flag -quiet -fix-errors D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.17 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp std=gnu++98 -directive=D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/all.directive.json -quiet -fix-errors D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.162 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/xilinx-dataflow-lawyer.matmul.pp.0.cpp.diag.yml D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/xilinx-dataflow-lawyer.matmul.pp.0.cpp.out.log 2> D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/xilinx-dataflow-lawyer.matmul.pp.0.cpp.err.log 
+Command       ap_eval done; 0.257 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/tidy-3.1.matmul.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/tidy-3.1.matmul.pp.0.cpp.out.log 2> D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/tidy-3.1.matmul.pp.0.cpp.err.log 
+Command         ap_eval done; 0.453 sec.
+Execute         ap_eval exec -ignorestderr D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/xilinx-legacy-rewriter.matmul.pp.0.cpp.out.log 2> D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/xilinx-legacy-rewriter.matmul.pp.0.cpp.err.log 
+Command         ap_eval done; 0.193 sec.
+Command       tidy_31 done; 0.668 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 1.1 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.418 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot" -I "D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.bc" 
+INFO-FLOW: exec D:/Xilinx/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/Xilinx/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot -I D:/Xilinx/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.bc
+Command       clang done; 0.667 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul.g.bc -hls-opt -except-internalize matmul_top -LD:/Xilinx/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g 
+Command       llvm-ld done; 0.485 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 103.035 ; gain = 17.996
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 103.035 ; gain = 17.996
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.pp.bc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.pp.0.bc -disable-opt -LD:/Xilinx/Vivado/2018.3/win64/lib -lfloatconversion -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.214 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top matmul_top -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g.0.bc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.859 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 104.410 ; gain = 19.371
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g.1.bc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 1.377 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g.2.prechk.bc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 104.664 ; gain = 19.625
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.g.1.bc to D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.o.1.bc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (../matmul_gui/matmul.cpp:47) in function 'store' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'J' (../matmul_gui/matmul.cpp:33) in function 'matmul_core' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (../matmul_gui/matmul.cpp:22) in function 'load_B' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-1' (../matmul_gui/matmul.cpp:12) in function 'load_A' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (../matmul_gui/matmul.cpp:49) in function 'store' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'K' (../matmul_gui/matmul.cpp:36) in function 'matmul_core' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (../matmul_gui/matmul.cpp:24) in function 'load_B' completely with a factor of 32.
+INFO: [HLS 200-489] Unrolling loop 'Loop-1.1' (../matmul_gui/matmul.cpp:14) in function 'load_A' completely with a factor of 32.
+INFO: [XFORM 203-101] Partitioning array 'A_local' (../matmul_gui/matmul.cpp:58) in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'B_local' (../matmul_gui/matmul.cpp:59) in dimension 1 completely.
+WARNING: [XFORM 203-713] Reading dataflow channel 'B' in the middle of dataflow may stall the dataflow pipeline:
+WARNING: [XFORM 203-713] Argument 'B' has read operations in process function 'load_B'.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[0]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[1]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[2]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[3]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[4]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[5]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[6]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[7]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[8]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[9]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[10]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[11]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[12]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[13]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[14]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[15]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[16]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[17]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[18]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[19]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[20]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[21]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[22]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[23]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[24]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[25]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[26]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[27]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[28]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[29]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[30]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'B_local[31]' should be updated in process function 'load_B', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'matmul_top', detected/extracted 4 process function(s): 
+	 'load_A'
+	 'load_B'
+	 'matmul_core'
+	 'store'.
+Command         transform done; 2.462 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.o.1.tmp.bc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-11] Balancing expressions in function 'matmul_core' (../matmul_gui/matmul.cpp:31)...31 expression(s) balanced.
+Command         transform done; 0.258 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 133.191 ; gain = 48.152
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.o.2.bc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'I' (../matmul_gui/matmul.cpp:32:33) in function 'matmul_core'.
+Command         transform done; 0.78 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 186.555 ; gain = 101.516
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 5.968 sec.
+Command     elaborate done; 10.415 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'matmul_top' ...
+Execute       ap_set_top_model matmul_top 
+Execute       get_model_list matmul_top -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model matmul_top 
+Execute       preproc_iomode -model store 
+Execute       preproc_iomode -model matmul_core 
+Execute       preproc_iomode -model load_B 
+Execute       preproc_iomode -model load_A 
+Execute       get_model_list matmul_top -filter all-wo-channel 
+INFO-FLOW: Model list for configure: load_A load_B matmul_core store matmul_top
+INFO-FLOW: Configuring Module : load_A ...
+Execute       set_default_model load_A 
+Execute       apply_spec_resource_limit load_A 
+INFO-FLOW: Configuring Module : load_B ...
+Execute       set_default_model load_B 
+Execute       apply_spec_resource_limit load_B 
+INFO-FLOW: Configuring Module : matmul_core ...
+Execute       set_default_model matmul_core 
+Execute       apply_spec_resource_limit matmul_core 
+INFO-FLOW: Configuring Module : store ...
+Execute       set_default_model store 
+Execute       apply_spec_resource_limit store 
+INFO-FLOW: Configuring Module : matmul_top ...
+Execute       set_default_model matmul_top 
+Execute       apply_spec_resource_limit matmul_top 
+INFO-FLOW: Model list for preprocess: load_A load_B matmul_core store matmul_top
+INFO-FLOW: Preprocessing Module: load_A ...
+Execute       set_default_model load_A 
+Execute       cdfg_preprocess -model load_A 
+Execute       rtl_gen_preprocess load_A 
+INFO-FLOW: Preprocessing Module: load_B ...
+Execute       set_default_model load_B 
+Execute       cdfg_preprocess -model load_B 
+Execute       rtl_gen_preprocess load_B 
+INFO-FLOW: Preprocessing Module: matmul_core ...
+Execute       set_default_model matmul_core 
+Execute       cdfg_preprocess -model matmul_core 
+Execute       rtl_gen_preprocess matmul_core 
+INFO-FLOW: Preprocessing Module: store ...
+Execute       set_default_model store 
+Execute       cdfg_preprocess -model store 
+Execute       rtl_gen_preprocess store 
+INFO-FLOW: Preprocessing Module: matmul_top ...
+Execute       set_default_model matmul_top 
+Execute       cdfg_preprocess -model matmul_top 
+Execute       rtl_gen_preprocess matmul_top 
+INFO-FLOW: Model list for synthesis: load_A load_B matmul_core store matmul_top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_A' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model load_A 
+Execute       schedule -model load_A 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('A_load_2', ../matmul_gui/matmul.cpp:15) on array 'A' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'A'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 17.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 11.191 seconds; current allocated memory: 141.108 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.sched.adb -f 
+INFO-FLOW: Finish scheduling load_A.
+Execute       set_default_model load_A 
+Execute       bind -model load_A 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=load_A
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.086 seconds; current allocated memory: 141.786 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.bind.adb -f 
+INFO-FLOW: Finish binding load_A.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'load_B' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model load_B 
+Execute       schedule -model load_B 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('B_load_2', ../matmul_gui/matmul.cpp:25) on array 'B' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'B'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 17.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.985 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.066 seconds; current allocated memory: 146.500 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.verbose.sched.rpt -verbose -f 
+Command       report done; 0.344 sec.
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.sched.adb -f 
+Command       db_write done; 0.204 sec.
+INFO-FLOW: Finish scheduling load_B.
+Execute       set_default_model load_B 
+Execute       bind -model load_B 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=load_B
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.193 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.758 seconds; current allocated memory: 152.970 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.verbose.bind.rpt -verbose -f 
+Command       report done; 0.358 sec.
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.bind.adb -f 
+Command       db_write done; 0.248 sec.
+INFO-FLOW: Finish binding load_B.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matmul_core 
+Execute       schedule -model matmul_core 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'I_J'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 7.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.724 seconds; current allocated memory: 153.796 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.sched.adb -f 
+INFO-FLOW: Finish scheduling matmul_core.
+Execute       set_default_model matmul_core 
+Execute       bind -model matmul_core 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=matmul_core
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.125 seconds; current allocated memory: 154.697 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.bind.adb -f 
+INFO-FLOW: Finish binding matmul_core.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'store' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model store 
+Execute       schedule -model store 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('C_local_load_2', ../matmul_gui/matmul.cpp:50) on array 'C_local' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'C_local'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 16, Depth = 17.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.228 seconds; current allocated memory: 155.275 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.sched.adb -f 
+INFO-FLOW: Finish scheduling store.
+Execute       set_default_model store 
+Execute       bind -model store 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=store
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.092 seconds; current allocated memory: 155.911 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.verbose.bind.rpt -verbose -f 
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.bind.adb -f 
+INFO-FLOW: Finish binding store.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'matmul_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model matmul_top 
+Execute       schedule -model matmul_top 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.096 seconds; current allocated memory: 156.102 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.verbose.sched.rpt -verbose -f 
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.sched.adb -f 
+INFO-FLOW: Finish scheduling matmul_top.
+Execute       set_default_model matmul_top 
+Execute       bind -model matmul_top 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=matmul_top
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.228 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.266 seconds; current allocated memory: 156.472 MB.
+Execute       report -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.verbose.bind.rpt -verbose -f 
+Command       report done; 0.125 sec.
+Execute       db_write -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.bind.adb -f 
+INFO-FLOW: Finish binding matmul_top.
+Execute       get_model_list matmul_top -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess load_A 
+Execute       rtl_gen_preprocess load_B 
+Execute       rtl_gen_preprocess matmul_core 
+Execute       rtl_gen_preprocess store 
+Execute       rtl_gen_preprocess matmul_top 
+INFO-FLOW: Model list for RTL generation: load_A load_B matmul_core store matmul_top
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_A' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model load_A -vendor xilinx -mg_file D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_A'.
+INFO: [HLS 200-111]  Elapsed time: 0.192 seconds; current allocated memory: 157.943 MB.
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl load_A -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/systemc/load_A -synmodules load_A load_B matmul_core store matmul_top 
+Execute       gen_rtl load_A -style xilinx -f -lang vhdl -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/vhdl/load_A 
+Execute       gen_rtl load_A -style xilinx -f -lang vlog -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/verilog/load_A 
+Execute       gen_tb_info load_A -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A -p D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db 
+Execute       report -model load_A -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/load_A_csynth.rpt -f 
+Execute       report -model load_A -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/load_A_csynth.xml -f -x 
+Execute       report -model load_A -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.verbose.rpt -verbose -f 
+Execute       db_write -model load_A -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'load_B' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model load_B -vendor xilinx -mg_file D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'load_B'.
+Command       create_rtl_model done; 0.303 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.519 seconds; current allocated memory: 164.620 MB.
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl load_B -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/systemc/load_B -synmodules load_A load_B matmul_core store matmul_top 
+Execute       gen_rtl load_B -style xilinx -f -lang vhdl -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/vhdl/load_B 
+Execute       gen_rtl load_B -style xilinx -f -lang vlog -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/verilog/load_B 
+Execute       gen_tb_info load_B -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B -p D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db 
+Execute       report -model load_B -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/load_B_csynth.rpt -f 
+Execute       report -model load_B -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/load_B_csynth.xml -f -x 
+Execute       report -model load_B -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.verbose.rpt -verbose -f 
+Command       report done; 0.358 sec.
+Execute       db_write -model load_B -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.adb -f 
+Command       db_write done; 0.267 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model matmul_core -vendor xilinx -mg_file D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_core'.
+INFO: [HLS 200-111]  Elapsed time: 1.495 seconds; current allocated memory: 167.451 MB.
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matmul_core -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/systemc/matmul_core -synmodules load_A load_B matmul_core store matmul_top 
+Execute       gen_rtl matmul_core -style xilinx -f -lang vhdl -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/vhdl/matmul_core 
+Execute       gen_rtl matmul_core -style xilinx -f -lang vlog -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/verilog/matmul_core 
+Execute       gen_tb_info matmul_core -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core -p D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db 
+Execute       report -model matmul_core -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/matmul_core_csynth.rpt -f 
+Execute       report -model matmul_core -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/matmul_core_csynth.xml -f -x 
+Execute       report -model matmul_core -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.verbose.rpt -verbose -f 
+Command       report done; 0.109 sec.
+Execute       db_write -model matmul_core -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'store' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model store -vendor xilinx -mg_file D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'store'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 169.124 MB.
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl store -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/systemc/store -synmodules load_A load_B matmul_core store matmul_top 
+Execute       gen_rtl store -style xilinx -f -lang vhdl -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/vhdl/store 
+Execute       gen_rtl store -style xilinx -f -lang vlog -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/verilog/store 
+Execute       gen_tb_info store -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store -p D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db 
+Execute       report -model store -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/store_csynth.rpt -f 
+Execute       report -model store -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/store_csynth.xml -f -x 
+Execute       report -model store -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.verbose.rpt -verbose -f 
+Execute       db_write -model store -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'matmul_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model matmul_top -vendor xilinx -mg_file D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/A' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/B' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'matmul_top/C' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'matmul_top' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_0' to 'matmul_top_A_locabkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_1' to 'matmul_top_A_locacud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_2' to 'matmul_top_A_locadEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_3' to 'matmul_top_A_locaeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_4' to 'matmul_top_A_locafYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_5' to 'matmul_top_A_locag8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_6' to 'matmul_top_A_locahbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_7' to 'matmul_top_A_locaibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_8' to 'matmul_top_A_locajbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_9' to 'matmul_top_A_locakbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_10' to 'matmul_top_A_localbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_11' to 'matmul_top_A_locamb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_12' to 'matmul_top_A_locancg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_13' to 'matmul_top_A_locaocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_14' to 'matmul_top_A_locapcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_15' to 'matmul_top_A_locaqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_16' to 'matmul_top_A_locarcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_17' to 'matmul_top_A_locasc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_18' to 'matmul_top_A_locatde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_19' to 'matmul_top_A_locaudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_20' to 'matmul_top_A_locavdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_21' to 'matmul_top_A_locawdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_22' to 'matmul_top_A_locaxdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_23' to 'matmul_top_A_locayd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_24' to 'matmul_top_A_locazec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_25' to 'matmul_top_A_locaAem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_26' to 'matmul_top_A_locaBew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_27' to 'matmul_top_A_locaCeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_28' to 'matmul_top_A_locaDeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_29' to 'matmul_top_A_locaEe0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_30' to 'matmul_top_A_locaFfa' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_A_local_31' to 'matmul_top_A_locaGfk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_0' to 'matmul_top_B_locaHfu' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_1' to 'matmul_top_B_locaIfE' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_2' to 'matmul_top_B_locaJfO' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_3' to 'matmul_top_B_locaKfY' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_4' to 'matmul_top_B_locaLf8' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_5' to 'matmul_top_B_locaMgi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_6' to 'matmul_top_B_locaNgs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_7' to 'matmul_top_B_locaOgC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_8' to 'matmul_top_B_locaPgM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_9' to 'matmul_top_B_locaQgW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_10' to 'matmul_top_B_locaRg6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_11' to 'matmul_top_B_locaShg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_12' to 'matmul_top_B_locaThq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_13' to 'matmul_top_B_locaUhA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_14' to 'matmul_top_B_locaVhK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_15' to 'matmul_top_B_locaWhU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_16' to 'matmul_top_B_locaXh4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_17' to 'matmul_top_B_locaYie' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_18' to 'matmul_top_B_locaZio' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_19' to 'matmul_top_B_loca0iy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_20' to 'matmul_top_B_loca1iI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_21' to 'matmul_top_B_loca2iS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_22' to 'matmul_top_B_loca3i2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_23' to 'matmul_top_B_loca4jc' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_24' to 'matmul_top_B_loca5jm' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_25' to 'matmul_top_B_loca6jw' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_26' to 'matmul_top_B_loca7jG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_27' to 'matmul_top_B_loca8jQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_28' to 'matmul_top_B_loca9j0' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_29' to 'matmul_top_B_locabak' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_30' to 'matmul_top_B_locabbk' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'matmul_top_B_local_31' to 'matmul_top_B_locabck' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'matmul_top'.
+Command       create_rtl_model done; 0.635 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.867 seconds; current allocated memory: 177.007 MB.
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.rtl_wrap.cfg.tcl 
+Execute       gen_rtl matmul_top -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/systemc/matmul_top -synmodules load_A load_B matmul_core store matmul_top 
+Execute       gen_rtl matmul_top -istop -style xilinx -f -lang vhdl -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/vhdl/matmul_top 
+Execute       gen_rtl matmul_top -istop -style xilinx -f -lang vlog -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/verilog/matmul_top 
+Execute       export_constraint_db -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.constraint.tcl -f -tool general 
+Execute       report -model matmul_top -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.design.xml -verbose -f -dv 
+Command       report done; 0.184 sec.
+Execute       report -model matmul_top -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 0.129 sec.
+Execute       gen_tb_info matmul_top -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top -p D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db 
+Execute       report -model matmul_top -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/matmul_top_csynth.rpt -f 
+Execute       report -model matmul_top -o D:/experiment_class/experiment_1/experiment_1/solution_v4/syn/report/matmul_top_csynth.xml -f -x 
+Execute       report -model matmul_top -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.verbose.rpt -verbose -f 
+Command       report done; 0.168 sec.
+Execute       db_write -model matmul_top -o D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.adb -f 
+Execute       sc_get_clocks matmul_top 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain matmul_top 
+INFO-FLOW: Model list for RTL component generation: load_A load_B matmul_core store matmul_top
+INFO-FLOW: Handling components in module [load_A] ... 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.compgen.tcl 
+INFO-FLOW: Handling components in module [load_B] ... 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.compgen.tcl 
+INFO-FLOW: Handling components in module [matmul_core] ... 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.compgen.tcl 
+INFO-FLOW: Handling components in module [store] ... 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.compgen.tcl 
+INFO-FLOW: Handling components in module [matmul_top] ... 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.compgen.tcl 
+INFO-FLOW: Append model load_A
+INFO-FLOW: Append model load_B
+INFO-FLOW: Append model matmul_core
+INFO-FLOW: Append model store
+INFO-FLOW: Append model matmul_top
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: load_A load_B matmul_core store matmul_top
+INFO-FLOW: To file: write model load_A
+INFO-FLOW: To file: write model load_B
+INFO-FLOW: To file: write model matmul_core
+INFO-FLOW: To file: write model store
+INFO-FLOW: To file: write model matmul_top
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/experiment_class/experiment_1/experiment_1/solution_v4
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'matmul_top_A_locabkb_memcore_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matmul_top_B_locaHfu_memcore_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'matmul_top_C_local_memcore_ram (RAM)' using block RAMs.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/experiment_class/experiment_1/experiment_1/solution_v4
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Execute             source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Execute           source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Execute       source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/artix7/artix7_fpv6.gen 
+Execute         source D:/Xilinx/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=matmul_top xml_exists=0
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.rtl_wrap.cfg.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.rtl_wrap.cfg.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.rtl_wrap.cfg.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.compgen.tcl 
+Execute         source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute         source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute         source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_A.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/load_B.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_core.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/store.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.compgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.constraint.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=3
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=5 #gSsdmPorts=8
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.tbgen.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/matmul_top.constraint.tcl 
+Execute       sc_get_clocks matmul_top 
+Execute       source D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: D:/experiment_class/experiment_1/experiment_1/solution_v4/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 276.555 ; gain = 191.516
+INFO: [SYSC 207-301] Generating SystemC RTL for matmul_top.
+INFO: [VHDL 208-304] Generating VHDL RTL for matmul_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for matmul_top.
+Command     autosyn done; 8.519 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 18.943 sec.
+Command ap_source done; 19.117 sec.
+Execute cleanup_all 

@@ -1,0 +1,491 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'matmul_top'" level="0">
+<item name = "Date">Tue Nov  3 21:10:04 2026
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">experiment_1</item>
+<item name = "Solution">solution_v4</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100tcsg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Target clock period (ns)">10.00</item>
+<item name = "Clock uncertainty (ns)">1.25</item>
+<item name = "Estimated clock period (ns)">8.470</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2061, 2061, 1032, 1032, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="load_B_U0">load_B, 514, 514, 514, 514, none</column>
+<column name="matmul_core_U0">matmul_core, 1031, 1031, 1031, 1031, none</column>
+<column name="store_U0">store, 514, 514, 514, 514, none</column>
+<column name="load_A_U0">load_A, 514, 514, 514, 514, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 294</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">0, 96, 3946, 9650</column>
+<column name="Memory">98, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 612</column>
+<column name="Register">-, -, 70, -</column>
+<specialColumn name="Available">270, 240, 126800, 63400</specialColumn>
+<specialColumn name="Utilization (%)">36, 40, 3, 16</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="load_A_U0">load_A, 0, 0, 46, 670</column>
+<column name="load_B_U0">load_B, 0, 0, 45, 6110</column>
+<column name="matmul_core_U0">matmul_core, 0, 96, 3623, 2030</column>
+<column name="store_U0">store, 0, 0, 232, 840</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="A_local_0_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_1_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_2_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_3_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_4_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_5_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_6_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_7_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_8_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_9_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_10_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_11_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_12_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_13_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_14_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_15_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_16_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_17_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_18_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_19_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_20_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_21_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_22_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_23_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_24_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_25_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_26_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_27_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_28_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_29_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_30_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="A_local_31_U">matmul_top_A_locabkb, 1, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_0_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_1_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_2_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_3_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_4_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_5_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_6_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_7_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_8_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_9_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_10_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_11_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_12_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_13_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_14_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_15_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_16_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_17_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_18_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_19_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_20_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_21_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_22_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_23_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_24_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_25_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_26_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_27_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_28_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_29_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_30_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="B_local_31_U">matmul_top_B_locaHfu, 2, 0, 0, 32, 32, 2, 2048</column>
+<column name="C_local_U">matmul_top_C_local, 2, 0, 0, 1024, 32, 2, 65536</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="load_A_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="load_B_U0_ap_ready_count">+, 0, 0, 10, 2, 1</column>
+<column name="ap_channel_done_A_local_0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_10">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_11">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_12">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_13">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_14">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_15">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_16">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_17">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_18">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_19">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_20">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_21">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_22">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_23">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_24">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_25">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_26">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_27">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_28">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_29">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_30">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_31">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_4">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_5">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_6">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_7">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_8">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_A_local_9">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_0">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_1">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_10">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_11">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_12">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_13">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_14">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_15">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_16">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_17">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_18">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_19">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_20">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_21">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_22">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_23">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_24">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_25">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_26">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_27">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_28">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_29">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_3">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_30">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_31">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_4">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_5">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_6">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_7">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_8">and, 0, 0, 2, 1, 1</column>
+<column name="ap_channel_done_B_local_9">and, 0, 0, 2, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 2, 1, 1</column>
+<column name="load_A_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="load_A_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="load_B_U0_ap_continue">and, 0, 0, 2, 1, 1</column>
+<column name="load_B_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="matmul_core_U0_ap_start">and, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_10">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_11">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_12">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_13">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_14">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_15">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_16">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_17">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_18">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_19">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_20">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_21">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_22">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_23">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_24">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_25">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_26">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_27">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_28">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_29">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_30">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_31">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_5">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_6">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_7">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_8">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_A_local_9">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_0">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_1">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_10">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_11">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_12">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_13">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_14">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_15">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_16">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_17">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_18">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_19">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_2">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_20">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_21">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_22">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_23">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_24">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_25">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_26">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_27">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_28">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_29">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_3">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_30">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_31">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_4">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_5">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_6">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_7">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_8">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_channel_write_B_local_9">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_load_A_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+<column name="ap_sync_load_B_U0_ap_ready">or, 0, 0, 2, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_sync_reg_channel_write_A_local_0">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_1">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_10">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_11">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_12">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_13">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_14">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_15">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_16">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_17">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_18">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_19">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_2">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_20">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_21">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_22">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_23">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_24">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_25">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_26">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_27">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_28">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_29">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_3">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_30">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_31">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_4">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_5">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_6">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_7">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_8">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_A_local_9">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_0">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_1">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_10">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_11">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_12">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_13">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_14">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_15">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_16">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_17">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_18">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_19">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_2">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_20">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_21">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_22">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_23">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_24">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_25">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_26">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_27">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_28">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_29">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_3">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_30">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_31">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_4">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_5">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_6">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_7">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_8">9, 2, 1, 2</column>
+<column name="ap_sync_reg_channel_write_B_local_9">9, 2, 1, 2</column>
+<column name="ap_sync_reg_load_A_U0_ap_ready">9, 2, 1, 2</column>
+<column name="ap_sync_reg_load_B_U0_ap_ready">9, 2, 1, 2</column>
+<column name="load_A_U0_ap_ready_count">9, 2, 2, 4</column>
+<column name="load_B_U0_ap_ready_count">9, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_sync_reg_channel_write_A_local_0">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_1">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_10">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_11">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_12">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_13">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_14">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_15">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_16">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_17">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_18">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_19">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_2">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_20">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_21">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_22">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_23">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_24">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_25">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_26">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_27">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_28">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_29">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_3">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_30">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_31">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_4">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_5">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_6">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_7">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_8">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_A_local_9">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_0">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_1">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_10">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_11">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_12">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_13">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_14">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_15">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_16">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_17">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_18">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_19">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_2">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_20">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_21">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_22">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_23">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_24">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_25">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_26">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_27">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_28">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_29">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_3">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_30">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_31">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_4">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_5">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_6">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_7">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_8">1, 0, 1, 0</column>
+<column name="ap_sync_reg_channel_write_B_local_9">1, 0, 1, 0</column>
+<column name="ap_sync_reg_load_A_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_load_B_U0_ap_ready">1, 0, 1, 0</column>
+<column name="load_A_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="load_B_U0_ap_ready_count">2, 0, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, matmul_top, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, matmul_top, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, matmul_top, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, matmul_top, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, matmul_top, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, matmul_top, return value</column>
+<column name="A_address0">out, 10, ap_memory, A, array</column>
+<column name="A_ce0">out, 1, ap_memory, A, array</column>
+<column name="A_d0">out, 32, ap_memory, A, array</column>
+<column name="A_q0">in, 32, ap_memory, A, array</column>
+<column name="A_we0">out, 1, ap_memory, A, array</column>
+<column name="A_address1">out, 10, ap_memory, A, array</column>
+<column name="A_ce1">out, 1, ap_memory, A, array</column>
+<column name="A_d1">out, 32, ap_memory, A, array</column>
+<column name="A_q1">in, 32, ap_memory, A, array</column>
+<column name="A_we1">out, 1, ap_memory, A, array</column>
+<column name="B_address0">out, 10, ap_memory, B, array</column>
+<column name="B_ce0">out, 1, ap_memory, B, array</column>
+<column name="B_d0">out, 32, ap_memory, B, array</column>
+<column name="B_q0">in, 32, ap_memory, B, array</column>
+<column name="B_we0">out, 1, ap_memory, B, array</column>
+<column name="B_address1">out, 10, ap_memory, B, array</column>
+<column name="B_ce1">out, 1, ap_memory, B, array</column>
+<column name="B_d1">out, 32, ap_memory, B, array</column>
+<column name="B_q1">in, 32, ap_memory, B, array</column>
+<column name="B_we1">out, 1, ap_memory, B, array</column>
+<column name="C_address0">out, 10, ap_memory, C, array</column>
+<column name="C_ce0">out, 1, ap_memory, C, array</column>
+<column name="C_d0">out, 32, ap_memory, C, array</column>
+<column name="C_q0">in, 32, ap_memory, C, array</column>
+<column name="C_we0">out, 1, ap_memory, C, array</column>
+<column name="C_address1">out, 10, ap_memory, C, array</column>
+<column name="C_ce1">out, 1, ap_memory, C, array</column>
+<column name="C_d1">out, 32, ap_memory, C, array</column>
+<column name="C_q1">in, 32, ap_memory, C, array</column>
+<column name="C_we1">out, 1, ap_memory, C, array</column>
+</table>
+</item>
+</section>
+
+<section name = "Critical Path" level="0">
+<item name = "Max Delay">3.26</item>
+<item name = "Critical Path Table"><table name="Critical Path Table" hasTotal="0">
+<keys size="15">Name, Operator, Delay, Accumulated Delay, Store Source, Resource, Core, Interface, Type, Port, Array, Scope, Pointer, Callee, Phi Node</keys>
+<column name="'A_local[0]', ../matmul_gui/matmul.cpp:58">alloca, 3.26, 3.26, -, -, -, -, -, -, -, -, -, -, -</column>
+</table>
+</item>
+</section>
+</profile>

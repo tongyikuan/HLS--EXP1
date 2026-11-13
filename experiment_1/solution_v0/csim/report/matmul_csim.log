@@ -1,0 +1,10 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../matmul_gui/matmul_tb.cpp in debug mode
+   Compiling ../../../../../matmul_gui/matmul.cpp in debug mode
+   Generating csim.exe
+矩阵规模: 32 x 32, 比较元素�?敡�: 1024
+最大绝对�??�?: 0, 错�??元素�?敡�: 0
+*** 测试通过 (TEST PASSED) ***
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

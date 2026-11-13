@@ -1,0 +1,5 @@
+load_A
+load_B
+matmul_core
+store
+matmul_top

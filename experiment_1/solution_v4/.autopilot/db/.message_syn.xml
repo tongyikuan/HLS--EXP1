@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;../matmul_gui/matmul.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 103.035 ; gain = 17.996"/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 103.035 ; gain = 17.996"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1467" tag="" content="Starting code transformations ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 104.410 ; gain = 19.371"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1472" tag="" content="Checking synthesizability ..."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 104.664 ; gain = 19.625"/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;Loop-1&apos; (../matmul_gui/matmul.cpp:47) in function &apos;store&apos; for pipelining."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;J&apos; (../matmul_gui/matmul.cpp:33) in function &apos;matmul_core&apos; for pipelining."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;Loop-1&apos; (../matmul_gui/matmul.cpp:22) in function &apos;load_B&apos; for pipelining."/>
+	<Message severity="INFO" prefix="[XFORM 203-502]" key="XFORM_AUTO_UNROLL_STATUS_246" tag="" content="Unrolling all sub-loops inside loop &apos;Loop-1&apos; (../matmul_gui/matmul.cpp:12) in function &apos;load_A&apos; for pipelining."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1.1&apos; (../matmul_gui/matmul.cpp:49) in function &apos;store&apos; completely with a factor of 32."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;K&apos; (../matmul_gui/matmul.cpp:36) in function &apos;matmul_core&apos; completely with a factor of 32."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1.1&apos; (../matmul_gui/matmul.cpp:24) in function &apos;load_B&apos; completely with a factor of 32."/>
+	<Message severity="INFO" prefix="[HLS 200-489]" key="HLS 200-489" tag="" content="Unrolling loop &apos;Loop-1.1&apos; (../matmul_gui/matmul.cpp:14) in function &apos;load_A&apos; completely with a factor of 32."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;A_local&apos; (../matmul_gui/matmul.cpp:58) in dimension 2 completely."/>
+	<Message severity="INFO" prefix="[XFORM 203-101]" key="XFORM_PARTITION_STATUS_116" tag="" content="Partitioning array &apos;B_local&apos; (../matmul_gui/matmul.cpp:59) in dimension 1 completely."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_190" tag="SDX_CHANNEL,DATAFLOW" content="Reading dataflow channel &apos;B&apos; in the middle of dataflow may stall the dataflow pipeline:"/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_618" tag="SDX,DATAFLOW" content="Argument &apos;B&apos; has read operations in process function &apos;load_B&apos;."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[0]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[1]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[2]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[3]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[4]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[5]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[6]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[7]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[8]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[9]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[10]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[11]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[12]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[13]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[14]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[15]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[16]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[17]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[18]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[19]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[20]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[21]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[22]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[23]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[24]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[25]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[26]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[27]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[28]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[29]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[30]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="WARNING" prefix="[XFORM 203-713]" key="XFORM_DATAFLOW_WARNING_193" tag="ARRAY,SDX_ARRAY,DATAFLOW" content="All the elements of global array &apos;B_local[31]&apos; should be updated in process function &apos;load_B&apos;, otherwise it may not be synthesized correctly."/>
+	<Message severity="INFO" prefix="[XFORM 203-712]" key="XFORM_DATAFLOW_TRANSFORM_230" tag="DATAFLOW" content="Applying dataflow to function &apos;matmul_top&apos;, detected/extracted 4 process function(s): 
+	 &apos;load_A&apos;
+	 &apos;load_B&apos;
+	 &apos;matmul_core&apos;
+	 &apos;store&apos;."/>
+	<Message severity="INFO" prefix="[XFORM 203-11]" key="XFORM_EXPR_BALANCE_STATUS_178" tag="" content="Balancing expressions in function &apos;matmul_core&apos; (../matmul_gui/matmul.cpp:31)...31 expression(s) balanced."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Pre-synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 133.191 ; gain = 48.152"/>
+	<Message severity="INFO" prefix="[XFORM 203-541]" key="XFORM_LOOPFLAT_STATUS_218" tag="" content="Flattening a loop nest &apos;I&apos; (../matmul_gui/matmul.cpp:32:33) in function &apos;matmul_core&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 186.555 ; gain = 101.516"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1317" tag="" content="Starting hardware synthesis ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1385" tag="" content="Synthesizing &apos;matmul_top&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;load_A&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;A_load_2&apos;, ../matmul_gui/matmul.cpp:15) on array &apos;A&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;A&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 16, Depth = 17."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 11.191 seconds; current allocated memory: 141.108 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.086 seconds; current allocated memory: 141.786 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;load_B&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;B_load_2&apos;, ../matmul_gui/matmul.cpp:25) on array &apos;B&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;B&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 16, Depth = 17."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.066 seconds; current allocated memory: 146.500 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.758 seconds; current allocated memory: 152.970 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;matmul_core&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;I_J&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 1, Depth = 7."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.724 seconds; current allocated memory: 153.796 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.125 seconds; current allocated memory: 154.697 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;store&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_41" tag="" content="Pipelining loop &apos;Loop 1&apos;."/>
+	<Message severity="WARNING" prefix="[SCHED 204-69]" key="SCHED_RESOURCE_CONSTRAINT_NOT_MET_38" tag="SDX_KERNEL,SCHEDULE" content="Unable to schedule &apos;load&apos; operation (&apos;C_local_load_2&apos;, ../matmul_gui/matmul.cpp:50) on array &apos;C_local&apos; due to limited memory ports. Please consider using a memory core with more ports or partitioning the array &apos;C_local&apos;."/>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_44" tag="" content="Pipelining result : Target II = 1, Final II = 16, Depth = 17."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.228 seconds; current allocated memory: 155.275 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.092 seconds; current allocated memory: 155.911 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1477" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-42]" key="HLS_42_1438" tag="" content="-- Implementing module &apos;matmul_top&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1478" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_597" tag="" content="Starting scheduling ..."/>
+	<Message severity="INFO" prefix="[SCHED 204-11]" key="SCHED_SCHED_STATUS_596" tag="" content="Finished scheduling."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.096 seconds; current allocated memory: 156.102 MB."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_926" tag="" content="Starting micro-architecture generation ..."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_698" tag="" content="Performing variable lifetime analysis."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_697" tag="" content="Exploring resource sharing."/>
+	<Message severity="INFO" prefix="[BIND 205-101]" key="BIND_101_693" tag="" content="Binding ..."/>
+	<Message severity="INFO" prefix="[BIND 205-100]" key="BIND_100_925" tag="" content="Finished micro-architecture generation."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.266 seconds; current allocated memory: 156.472 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;load_A&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;load_A&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.192 seconds; current allocated memory: 157.943 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;load_B&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;load_B&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.519 seconds; current allocated memory: 164.620 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;matmul_core&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;matmul_core&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 1.495 seconds; current allocated memory: 167.451 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;store&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;store&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.36 seconds; current allocated memory: 169.124 MB."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1483" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1484" tag="" content="-- Generating RTL for module &apos;matmul_top&apos;"/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1485" tag="" content="----------------------------------------------------------------"/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matmul_top/A&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matmul_top/B&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on port &apos;matmul_top/C&apos; to &apos;ap_memory&apos;."/>
+	<Message severity="INFO" prefix="[RTGEN 206-500]" key="PREPROC_IO_COMP_CONFLICT_1950" tag="" content="Setting interface mode on function &apos;matmul_top&apos; to &apos;ap_ctrl_hs&apos;."/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_0&apos; to &apos;matmul_top_A_locabkb&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_1&apos; to &apos;matmul_top_A_locacud&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_2&apos; to &apos;matmul_top_A_locadEe&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_3&apos; to &apos;matmul_top_A_locaeOg&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_4&apos; to &apos;matmul_top_A_locafYi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_5&apos; to &apos;matmul_top_A_locag8j&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_6&apos; to &apos;matmul_top_A_locahbi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_7&apos; to &apos;matmul_top_A_locaibs&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_8&apos; to &apos;matmul_top_A_locajbC&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_9&apos; to &apos;matmul_top_A_locakbM&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_10&apos; to &apos;matmul_top_A_localbW&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_11&apos; to &apos;matmul_top_A_locamb6&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_12&apos; to &apos;matmul_top_A_locancg&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_13&apos; to &apos;matmul_top_A_locaocq&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_14&apos; to &apos;matmul_top_A_locapcA&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_15&apos; to &apos;matmul_top_A_locaqcK&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_16&apos; to &apos;matmul_top_A_locarcU&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_17&apos; to &apos;matmul_top_A_locasc4&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_18&apos; to &apos;matmul_top_A_locatde&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_19&apos; to &apos;matmul_top_A_locaudo&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_20&apos; to &apos;matmul_top_A_locavdy&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_21&apos; to &apos;matmul_top_A_locawdI&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_22&apos; to &apos;matmul_top_A_locaxdS&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_23&apos; to &apos;matmul_top_A_locayd2&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_24&apos; to &apos;matmul_top_A_locazec&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_25&apos; to &apos;matmul_top_A_locaAem&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_26&apos; to &apos;matmul_top_A_locaBew&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_27&apos; to &apos;matmul_top_A_locaCeG&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_28&apos; to &apos;matmul_top_A_locaDeQ&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_29&apos; to &apos;matmul_top_A_locaEe0&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_30&apos; to &apos;matmul_top_A_locaFfa&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_A_local_31&apos; to &apos;matmul_top_A_locaGfk&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_0&apos; to &apos;matmul_top_B_locaHfu&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_1&apos; to &apos;matmul_top_B_locaIfE&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_2&apos; to &apos;matmul_top_B_locaJfO&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_3&apos; to &apos;matmul_top_B_locaKfY&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_4&apos; to &apos;matmul_top_B_locaLf8&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_5&apos; to &apos;matmul_top_B_locaMgi&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_6&apos; to &apos;matmul_top_B_locaNgs&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_7&apos; to &apos;matmul_top_B_locaOgC&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_8&apos; to &apos;matmul_top_B_locaPgM&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_9&apos; to &apos;matmul_top_B_locaQgW&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_10&apos; to &apos;matmul_top_B_locaRg6&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_11&apos; to &apos;matmul_top_B_locaShg&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_12&apos; to &apos;matmul_top_B_locaThq&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_13&apos; to &apos;matmul_top_B_locaUhA&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_14&apos; to &apos;matmul_top_B_locaVhK&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_15&apos; to &apos;matmul_top_B_locaWhU&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_16&apos; to &apos;matmul_top_B_locaXh4&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_17&apos; to &apos;matmul_top_B_locaYie&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_18&apos; to &apos;matmul_top_B_locaZio&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_19&apos; to &apos;matmul_top_B_loca0iy&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_20&apos; to &apos;matmul_top_B_loca1iI&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_21&apos; to &apos;matmul_top_B_loca2iS&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_22&apos; to &apos;matmul_top_B_loca3i2&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_23&apos; to &apos;matmul_top_B_loca4jc&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_24&apos; to &apos;matmul_top_B_loca5jm&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_25&apos; to &apos;matmul_top_B_loca6jw&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_26&apos; to &apos;matmul_top_B_loca7jG&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_27&apos; to &apos;matmul_top_B_loca8jQ&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_28&apos; to &apos;matmul_top_B_loca9j0&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_29&apos; to &apos;matmul_top_B_locabak&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_30&apos; to &apos;matmul_top_B_locabbk&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[SYN 201-210]" key="SYN_210_889" tag="" content="Renamed object name &apos;matmul_top_B_local_31&apos; to &apos;matmul_top_B_locabck&apos; due to the length limit 20"/>
+	<Message severity="INFO" prefix="[RTGEN 206-100]" key="RTGEN_100_856" tag="" content="Finished creating RTL model for &apos;matmul_top&apos;."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_966" tag="" content=" Elapsed time: 0.867 seconds; current allocated memory: 177.007 MB."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;matmul_top_A_locabkb_memcore_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;matmul_top_B_locaHfu_memcore_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[RTMG 210-278]" key="RTMG_278_1790" tag="" content="Implementing memory &apos;matmul_top_C_local_memcore_ram (RAM)&apos; using block RAMs."/>
+	<Message severity="INFO" prefix="[HLS 200-111]" key="HLS_111_965" tag="" content="Finished generating all RTL models Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 276.555 ; gain = 191.516"/>
+	<Message severity="INFO" prefix="[SYSC 207-301]" key="SYSC_301_1065" tag="" content="Generating SystemC RTL for matmul_top."/>
+	<Message severity="INFO" prefix="[VHDL 208-304]" key="VHDL_304_1066" tag="" content="Generating VHDL RTL for matmul_top."/>
+	<Message severity="INFO" prefix="[VLOG 209-307]" key="VLOG_307_1067" tag="" content="Generating Verilog RTL for matmul_top."/>
+	<Message severity="INFO" prefix="[HLS 200-112]" key="HLS_112_964" tag="" content="Total elapsed time: 19.618 seconds; peak allocated memory: 177.007 MB."/>
+</Messages>

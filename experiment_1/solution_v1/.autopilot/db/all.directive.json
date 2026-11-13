@@ -1,0 +1,15 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [{
+          "functionName": "matmul_top",
+          "label": "K",
+          "functionLabel": "",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [{
+                "name": "II",
+                "value": "1"
+              }]
+          }
+        }]
+    }]}

@@ -1,0 +1,588 @@
+
+
+================================================================
+== Vivado HLS Report for 'matmul_top'
+================================================================
+* Date:           Mon Nov  2 11:51:13 2026
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        experiment_1
+* Solution:       solution_v2c
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.470|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +------+------+------+------+---------+
+    |   Latency   |   Interval  | Pipeline|
+    |  min |  max |  min |  max |   Type  |
+    +------+------+------+------+---------+
+    |  8197|  8197|  8197|  8197|   none  |
+    +------+------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |          |   Latency   | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|  min |  max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+------+------+----------+-----------+-----------+------+----------+
+        |- I_J     |  8195|  8195|        12|          8|          1|  1024|    yes   |
+        +----------+------+------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 8, depth = 12
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 1
+  Pipeline-0 : II = 8, D = 12, States = { 2 3 4 5 6 7 8 9 10 11 12 13 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	14  / (exitcond_flatten)
+	3  / (!exitcond_flatten)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	2  / true
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([512 x i32]* %B_1), !map !7"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([512 x i32]* %B_0), !map !14"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_31), !map !20"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_30), !map !26"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_29), !map !32"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_28), !map !38"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_27), !map !44"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_26), !map !50"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_25), !map !56"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_24), !map !62"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_23), !map !68"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_22), !map !74"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_21), !map !80"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_20), !map !86"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_19), !map !92"   --->   Operation 29 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_18), !map !98"   --->   Operation 30 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_17), !map !104"   --->   Operation 31 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_16), !map !110"   --->   Operation 32 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_15), !map !116"   --->   Operation 33 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_14), !map !122"   --->   Operation 34 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_13), !map !128"   --->   Operation 35 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_12), !map !134"   --->   Operation 36 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_11), !map !140"   --->   Operation 37 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_10), !map !146"   --->   Operation 38 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_9), !map !152"   --->   Operation 39 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_8), !map !158"   --->   Operation 40 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_7), !map !164"   --->   Operation 41 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_6), !map !170"   --->   Operation 42 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_5), !map !176"   --->   Operation 43 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_4), !map !182"   --->   Operation 44 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_3), !map !188"   --->   Operation 45 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_2), !map !194"   --->   Operation 46 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_1), !map !200"   --->   Operation 47 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([32 x i32]* %A_0), !map !206"   --->   Operation 48 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %C), !map !212"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @matmul_top_str) nounwind"   --->   Operation 50 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (1.66ns)   --->   "br label %1" [../matmul_gui/matmul.cpp:13]   --->   Operation 51 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 7.41>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i11 [ 0, %0 ], [ %indvar_flatten_next, %.reset ]"   --->   Operation 52 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%i = phi i6 [ 0, %0 ], [ %tmp_mid2_v, %.reset ]" [../matmul_gui/matmul.cpp:25]   --->   Operation 53 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%j = phi i6 [ 0, %0 ], [ %j_1, %.reset ]"   --->   Operation 54 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (1.81ns)   --->   "%exitcond_flatten = icmp eq i11 %indvar_flatten, -1024"   --->   Operation 55 'icmp' 'exitcond_flatten' <Predicate = true> <Delay = 1.81> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 1024, i64 1024, i64 1024)"   --->   Operation 56 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 57 [1/1] (2.12ns)   --->   "%indvar_flatten_next = add i11 %indvar_flatten, 1"   --->   Operation 57 'add' 'indvar_flatten_next' <Predicate = true> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten, label %2, label %.reset"   --->   Operation 58 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 59 [1/1] (1.94ns)   --->   "%i_1 = add i6 %i, 1" [../matmul_gui/matmul.cpp:13]   --->   Operation 59 'add' 'i_1' <Predicate = (!exitcond_flatten)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [1/1] (1.45ns)   --->   "%exitcond = icmp eq i6 %j, -32" [../matmul_gui/matmul.cpp:17]   --->   Operation 60 'icmp' 'exitcond' <Predicate = (!exitcond_flatten)> <Delay = 1.45> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [1/1] (0.66ns)   --->   "%j_mid2 = select i1 %exitcond, i6 0, i6 %j" [../matmul_gui/matmul.cpp:17]   --->   Operation 61 'select' 'j_mid2' <Predicate = (!exitcond_flatten)> <Delay = 0.66> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 62 [1/1] (0.66ns)   --->   "%tmp_mid2_v = select i1 %exitcond, i6 %i_1, i6 %i" [../matmul_gui/matmul.cpp:25]   --->   Operation 62 'select' 'tmp_mid2_v' <Predicate = (!exitcond_flatten)> <Delay = 0.66> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.66> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_mid2 = zext i6 %tmp_mid2_v to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 63 'zext' 'tmp_mid2' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%tmp_2 = zext i6 %j_mid2 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 64 'zext' 'tmp_2' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%tmp_2_cast = zext i6 %j_mid2 to i7" [../matmul_gui/matmul.cpp:25]   --->   Operation 65 'zext' 'tmp_2_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%B_0_addr = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_2" [../matmul_gui/matmul.cpp:25]   --->   Operation 66 'getelementptr' 'B_0_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (2.03ns)   --->   "%tmp_4 = add i7 %tmp_2_cast, 32" [../matmul_gui/matmul.cpp:25]   --->   Operation 67 'add' 'tmp_4' <Predicate = (!exitcond_flatten)> <Delay = 2.03> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%tmp_4_cast = zext i7 %tmp_4 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 68 'zext' 'tmp_4_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%B_0_addr_1 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_4_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 69 'getelementptr' 'B_0_addr_1' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%B_1_addr = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_2" [../matmul_gui/matmul.cpp:25]   --->   Operation 70 'getelementptr' 'B_1_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%B_1_addr_1 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_4_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 71 'getelementptr' 'B_1_addr_1' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%A_0_addr = getelementptr [32 x i32]* %A_0, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 72 'getelementptr' 'A_0_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 73 [2/2] (3.25ns)   --->   "%A_0_load = load i32* %A_0_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 73 'load' 'A_0_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 74 [2/2] (3.25ns)   --->   "%B_0_load = load i32* %B_0_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 74 'load' 'B_0_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "%A_1_addr = getelementptr [32 x i32]* %A_1, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 75 'getelementptr' 'A_1_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 76 [2/2] (3.25ns)   --->   "%A_1_load = load i32* %A_1_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 76 'load' 'A_1_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 77 [2/2] (3.25ns)   --->   "%B_1_load = load i32* %B_1_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 77 'load' 'B_1_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 78 [1/1] (0.00ns)   --->   "%A_2_addr = getelementptr [32 x i32]* %A_2, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 78 'getelementptr' 'A_2_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 79 [2/2] (3.25ns)   --->   "%A_2_load = load i32* %A_2_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 79 'load' 'A_2_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 80 [2/2] (3.25ns)   --->   "%B_0_load_1 = load i32* %B_0_addr_1, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 80 'load' 'B_0_load_1' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%A_3_addr = getelementptr [32 x i32]* %A_3, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 81 'getelementptr' 'A_3_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 82 [2/2] (3.25ns)   --->   "%A_3_load = load i32* %A_3_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 82 'load' 'A_3_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 83 [2/2] (3.25ns)   --->   "%B_1_load_1 = load i32* %B_1_addr_1, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 83 'load' 'B_1_load_1' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%A_4_addr = getelementptr [32 x i32]* %A_4, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 84 'getelementptr' 'A_4_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 85 [2/2] (3.25ns)   --->   "%A_4_load = load i32* %A_4_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 85 'load' 'A_4_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%A_5_addr = getelementptr [32 x i32]* %A_5, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 86 'getelementptr' 'A_5_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 87 [2/2] (3.25ns)   --->   "%A_5_load = load i32* %A_5_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 87 'load' 'A_5_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%A_6_addr = getelementptr [32 x i32]* %A_6, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 88 'getelementptr' 'A_6_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 89 [2/2] (3.25ns)   --->   "%A_6_load = load i32* %A_6_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 89 'load' 'A_6_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%A_7_addr = getelementptr [32 x i32]* %A_7, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 90 'getelementptr' 'A_7_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 91 [2/2] (3.25ns)   --->   "%A_7_load = load i32* %A_7_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 91 'load' 'A_7_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 92 [1/1] (0.00ns)   --->   "%A_8_addr = getelementptr [32 x i32]* %A_8, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 92 'getelementptr' 'A_8_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 93 [2/2] (3.25ns)   --->   "%A_8_load = load i32* %A_8_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 93 'load' 'A_8_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%A_9_addr = getelementptr [32 x i32]* %A_9, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 94 'getelementptr' 'A_9_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 95 [2/2] (3.25ns)   --->   "%A_9_load = load i32* %A_9_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 95 'load' 'A_9_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%A_10_addr = getelementptr [32 x i32]* %A_10, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 96 'getelementptr' 'A_10_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 97 [2/2] (3.25ns)   --->   "%A_10_load = load i32* %A_10_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 97 'load' 'A_10_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%A_11_addr = getelementptr [32 x i32]* %A_11, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 98 'getelementptr' 'A_11_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 99 [2/2] (3.25ns)   --->   "%A_11_load = load i32* %A_11_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 99 'load' 'A_11_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 100 [1/1] (0.00ns)   --->   "%A_12_addr = getelementptr [32 x i32]* %A_12, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 100 'getelementptr' 'A_12_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 101 [2/2] (3.25ns)   --->   "%A_12_load = load i32* %A_12_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 101 'load' 'A_12_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%A_13_addr = getelementptr [32 x i32]* %A_13, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 102 'getelementptr' 'A_13_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 103 [2/2] (3.25ns)   --->   "%A_13_load = load i32* %A_13_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 103 'load' 'A_13_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 104 [1/1] (0.00ns)   --->   "%A_14_addr = getelementptr [32 x i32]* %A_14, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 104 'getelementptr' 'A_14_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 105 [2/2] (3.25ns)   --->   "%A_14_load = load i32* %A_14_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 105 'load' 'A_14_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 106 [1/1] (0.00ns)   --->   "%A_15_addr = getelementptr [32 x i32]* %A_15, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 106 'getelementptr' 'A_15_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 107 [2/2] (3.25ns)   --->   "%A_15_load = load i32* %A_15_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 107 'load' 'A_15_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 108 [1/1] (0.00ns)   --->   "%A_16_addr = getelementptr [32 x i32]* %A_16, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 108 'getelementptr' 'A_16_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 109 [2/2] (3.25ns)   --->   "%A_16_load = load i32* %A_16_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 109 'load' 'A_16_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 110 [1/1] (0.00ns)   --->   "%A_17_addr = getelementptr [32 x i32]* %A_17, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 110 'getelementptr' 'A_17_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 111 [2/2] (3.25ns)   --->   "%A_17_load = load i32* %A_17_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 111 'load' 'A_17_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 112 [1/1] (0.00ns)   --->   "%A_18_addr = getelementptr [32 x i32]* %A_18, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 112 'getelementptr' 'A_18_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 113 [2/2] (3.25ns)   --->   "%A_18_load = load i32* %A_18_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 113 'load' 'A_18_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 114 [1/1] (0.00ns)   --->   "%A_19_addr = getelementptr [32 x i32]* %A_19, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 114 'getelementptr' 'A_19_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 115 [2/2] (3.25ns)   --->   "%A_19_load = load i32* %A_19_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 115 'load' 'A_19_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 116 [1/1] (0.00ns)   --->   "%A_20_addr = getelementptr [32 x i32]* %A_20, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 116 'getelementptr' 'A_20_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 117 [2/2] (3.25ns)   --->   "%A_20_load = load i32* %A_20_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 117 'load' 'A_20_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 118 [1/1] (0.00ns)   --->   "%A_21_addr = getelementptr [32 x i32]* %A_21, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 118 'getelementptr' 'A_21_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 119 [2/2] (3.25ns)   --->   "%A_21_load = load i32* %A_21_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 119 'load' 'A_21_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 120 [1/1] (0.00ns)   --->   "%A_22_addr = getelementptr [32 x i32]* %A_22, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 120 'getelementptr' 'A_22_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 121 [2/2] (3.25ns)   --->   "%A_22_load = load i32* %A_22_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 121 'load' 'A_22_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 122 [1/1] (0.00ns)   --->   "%A_23_addr = getelementptr [32 x i32]* %A_23, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 122 'getelementptr' 'A_23_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 123 [2/2] (3.25ns)   --->   "%A_23_load = load i32* %A_23_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 123 'load' 'A_23_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 124 [1/1] (0.00ns)   --->   "%A_24_addr = getelementptr [32 x i32]* %A_24, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 124 'getelementptr' 'A_24_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 125 [2/2] (3.25ns)   --->   "%A_24_load = load i32* %A_24_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 125 'load' 'A_24_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 126 [1/1] (0.00ns)   --->   "%A_25_addr = getelementptr [32 x i32]* %A_25, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 126 'getelementptr' 'A_25_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 127 [2/2] (3.25ns)   --->   "%A_25_load = load i32* %A_25_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 127 'load' 'A_25_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 128 [1/1] (0.00ns)   --->   "%A_26_addr = getelementptr [32 x i32]* %A_26, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 128 'getelementptr' 'A_26_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 129 [2/2] (3.25ns)   --->   "%A_26_load = load i32* %A_26_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 129 'load' 'A_26_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 130 [1/1] (0.00ns)   --->   "%A_27_addr = getelementptr [32 x i32]* %A_27, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 130 'getelementptr' 'A_27_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 131 [2/2] (3.25ns)   --->   "%A_27_load = load i32* %A_27_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 131 'load' 'A_27_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 132 [1/1] (0.00ns)   --->   "%A_28_addr = getelementptr [32 x i32]* %A_28, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 132 'getelementptr' 'A_28_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 133 [2/2] (3.25ns)   --->   "%A_28_load = load i32* %A_28_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 133 'load' 'A_28_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 134 [1/1] (0.00ns)   --->   "%A_29_addr = getelementptr [32 x i32]* %A_29, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 134 'getelementptr' 'A_29_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 135 [2/2] (3.25ns)   --->   "%A_29_load = load i32* %A_29_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 135 'load' 'A_29_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 136 [1/1] (0.00ns)   --->   "%A_30_addr = getelementptr [32 x i32]* %A_30, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 136 'getelementptr' 'A_30_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 137 [2/2] (3.25ns)   --->   "%A_30_load = load i32* %A_30_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 137 'load' 'A_30_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_2 : Operation 138 [1/1] (0.00ns)   --->   "%A_31_addr = getelementptr [32 x i32]* %A_31, i64 0, i64 %tmp_mid2" [../matmul_gui/matmul.cpp:25]   --->   Operation 138 'getelementptr' 'A_31_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_2 : Operation 139 [2/2] (3.25ns)   --->   "%A_31_load = load i32* %A_31_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 139 'load' 'A_31_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 3 <SV = 2> <Delay = 5.37>
+ST_3 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_2_cast4_cast = zext i6 %j_mid2 to i8" [../matmul_gui/matmul.cpp:25]   --->   Operation 140 'zext' 'tmp_2_cast4_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 141 [1/1] (0.00ns)   --->   "%tmp_6 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 1, i6 %j_mid2)" [../matmul_gui/matmul.cpp:25]   --->   Operation 141 'bitconcatenate' 'tmp_6' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "%B_0_addr_2 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_6" [../matmul_gui/matmul.cpp:25]   --->   Operation 142 'getelementptr' 'B_0_addr_2' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 143 [1/1] (2.11ns)   --->   "%tmp_7 = add i8 %tmp_2_cast4_cast, 96" [../matmul_gui/matmul.cpp:25]   --->   Operation 143 'add' 'tmp_7' <Predicate = (!exitcond_flatten)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "%tmp_7_cast = zext i8 %tmp_7 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 144 'zext' 'tmp_7_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 145 [1/1] (0.00ns)   --->   "%B_0_addr_3 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_7_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 145 'getelementptr' 'B_0_addr_3' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 146 [1/1] (0.00ns)   --->   "%B_1_addr_2 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_6" [../matmul_gui/matmul.cpp:25]   --->   Operation 146 'getelementptr' 'B_1_addr_2' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 147 [1/1] (0.00ns)   --->   "%B_1_addr_3 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_7_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 147 'getelementptr' 'B_1_addr_3' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_3 : Operation 148 [1/2] (3.25ns)   --->   "%A_0_load = load i32* %A_0_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 148 'load' 'A_0_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 149 [1/2] (3.25ns)   --->   "%B_0_load = load i32* %B_0_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 149 'load' 'B_0_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 150 [1/2] (3.25ns)   --->   "%A_1_load = load i32* %A_1_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 150 'load' 'A_1_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 151 [1/2] (3.25ns)   --->   "%B_1_load = load i32* %B_1_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 151 'load' 'B_1_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 152 [1/2] (3.25ns)   --->   "%A_2_load = load i32* %A_2_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 152 'load' 'A_2_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 153 [1/2] (3.25ns)   --->   "%B_0_load_1 = load i32* %B_0_addr_1, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 153 'load' 'B_0_load_1' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 154 [1/2] (3.25ns)   --->   "%A_3_load = load i32* %A_3_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 154 'load' 'A_3_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 155 [1/2] (3.25ns)   --->   "%B_1_load_1 = load i32* %B_1_addr_1, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 155 'load' 'B_1_load_1' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 156 [1/2] (3.25ns)   --->   "%A_4_load = load i32* %A_4_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 156 'load' 'A_4_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 157 [2/2] (3.25ns)   --->   "%B_0_load_2 = load i32* %B_0_addr_2, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 157 'load' 'B_0_load_2' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 158 [1/2] (3.25ns)   --->   "%A_5_load = load i32* %A_5_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 158 'load' 'A_5_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 159 [2/2] (3.25ns)   --->   "%B_1_load_2 = load i32* %B_1_addr_2, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 159 'load' 'B_1_load_2' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 160 [1/2] (3.25ns)   --->   "%A_6_load = load i32* %A_6_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 160 'load' 'A_6_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 161 [2/2] (3.25ns)   --->   "%B_0_load_3 = load i32* %B_0_addr_3, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 161 'load' 'B_0_load_3' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 162 [1/2] (3.25ns)   --->   "%A_7_load = load i32* %A_7_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 162 'load' 'A_7_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 163 [2/2] (3.25ns)   --->   "%B_1_load_3 = load i32* %B_1_addr_3, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 163 'load' 'B_1_load_3' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 164 [1/2] (3.25ns)   --->   "%A_8_load = load i32* %A_8_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 164 'load' 'A_8_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 165 [1/2] (3.25ns)   --->   "%A_9_load = load i32* %A_9_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 165 'load' 'A_9_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 166 [1/2] (3.25ns)   --->   "%A_10_load = load i32* %A_10_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 166 'load' 'A_10_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 167 [1/2] (3.25ns)   --->   "%A_11_load = load i32* %A_11_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 167 'load' 'A_11_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 168 [1/2] (3.25ns)   --->   "%A_12_load = load i32* %A_12_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 168 'load' 'A_12_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 169 [1/2] (3.25ns)   --->   "%A_13_load = load i32* %A_13_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 169 'load' 'A_13_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 170 [1/2] (3.25ns)   --->   "%A_14_load = load i32* %A_14_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 170 'load' 'A_14_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 171 [1/2] (3.25ns)   --->   "%A_15_load = load i32* %A_15_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 171 'load' 'A_15_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 172 [1/2] (3.25ns)   --->   "%A_16_load = load i32* %A_16_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 172 'load' 'A_16_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 173 [1/2] (3.25ns)   --->   "%A_17_load = load i32* %A_17_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 173 'load' 'A_17_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 174 [1/2] (3.25ns)   --->   "%A_18_load = load i32* %A_18_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 174 'load' 'A_18_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 175 [1/2] (3.25ns)   --->   "%A_19_load = load i32* %A_19_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 175 'load' 'A_19_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 176 [1/2] (3.25ns)   --->   "%A_20_load = load i32* %A_20_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 176 'load' 'A_20_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 177 [1/2] (3.25ns)   --->   "%A_21_load = load i32* %A_21_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 177 'load' 'A_21_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 178 [1/2] (3.25ns)   --->   "%A_22_load = load i32* %A_22_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 178 'load' 'A_22_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 179 [1/2] (3.25ns)   --->   "%A_23_load = load i32* %A_23_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 179 'load' 'A_23_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 180 [1/2] (3.25ns)   --->   "%A_24_load = load i32* %A_24_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 180 'load' 'A_24_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 181 [1/2] (3.25ns)   --->   "%A_25_load = load i32* %A_25_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 181 'load' 'A_25_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 182 [1/2] (3.25ns)   --->   "%A_26_load = load i32* %A_26_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 182 'load' 'A_26_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 183 [1/2] (3.25ns)   --->   "%A_27_load = load i32* %A_27_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 183 'load' 'A_27_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 184 [1/2] (3.25ns)   --->   "%A_28_load = load i32* %A_28_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 184 'load' 'A_28_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 185 [1/2] (3.25ns)   --->   "%A_29_load = load i32* %A_29_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 185 'load' 'A_29_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 186 [1/2] (3.25ns)   --->   "%A_30_load = load i32* %A_30_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 186 'load' 'A_30_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 187 [1/2] (3.25ns)   --->   "%A_31_load = load i32* %A_31_addr, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 187 'load' 'A_31_load' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 4 <SV = 3> <Delay = 8.47>
+ST_4 : Operation 188 [1/1] (0.00ns)   --->   "%tmp_8 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 2, i6 %j_mid2)" [../matmul_gui/matmul.cpp:25]   --->   Operation 188 'bitconcatenate' 'tmp_8' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_4 : Operation 189 [1/1] (0.00ns)   --->   "%B_0_addr_4 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_8" [../matmul_gui/matmul.cpp:25]   --->   Operation 189 'getelementptr' 'B_0_addr_4' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_4 : Operation 190 [1/1] (2.11ns)   --->   "%tmp_9 = add i8 %tmp_2_cast4_cast, -96" [../matmul_gui/matmul.cpp:25]   --->   Operation 190 'add' 'tmp_9' <Predicate = (!exitcond_flatten)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 191 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i8 %tmp_9 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 191 'zext' 'tmp_9_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_4 : Operation 192 [1/1] (0.00ns)   --->   "%B_0_addr_5 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_9_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 192 'getelementptr' 'B_0_addr_5' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_4 : Operation 193 [1/1] (0.00ns)   --->   "%B_1_addr_4 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_8" [../matmul_gui/matmul.cpp:25]   --->   Operation 193 'getelementptr' 'B_1_addr_4' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_4 : Operation 194 [1/1] (0.00ns)   --->   "%B_1_addr_5 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_9_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 194 'getelementptr' 'B_1_addr_5' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_4 : Operation 195 [1/1] (8.47ns)   --->   "%tmp_5 = mul nsw i32 %B_0_load, %A_0_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 195 'mul' 'tmp_5' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 196 [1/1] (8.47ns)   --->   "%tmp_5_1 = mul nsw i32 %B_1_load, %A_1_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 196 'mul' 'tmp_5_1' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 197 [1/1] (8.47ns)   --->   "%tmp_5_2 = mul nsw i32 %B_0_load_1, %A_2_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 197 'mul' 'tmp_5_2' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 198 [1/1] (8.47ns)   --->   "%tmp_5_3 = mul nsw i32 %B_1_load_1, %A_3_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 198 'mul' 'tmp_5_3' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 199 [1/2] (3.25ns)   --->   "%B_0_load_2 = load i32* %B_0_addr_2, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 199 'load' 'B_0_load_2' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 200 [1/2] (3.25ns)   --->   "%B_1_load_2 = load i32* %B_1_addr_2, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 200 'load' 'B_1_load_2' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 201 [1/2] (3.25ns)   --->   "%B_0_load_3 = load i32* %B_0_addr_3, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 201 'load' 'B_0_load_3' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 202 [1/2] (3.25ns)   --->   "%B_1_load_3 = load i32* %B_1_addr_3, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 202 'load' 'B_1_load_3' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 203 [2/2] (3.25ns)   --->   "%B_0_load_4 = load i32* %B_0_addr_4, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 203 'load' 'B_0_load_4' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 204 [2/2] (3.25ns)   --->   "%B_1_load_4 = load i32* %B_1_addr_4, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 204 'load' 'B_1_load_4' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 205 [2/2] (3.25ns)   --->   "%B_0_load_5 = load i32* %B_0_addr_5, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 205 'load' 'B_0_load_5' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 206 [2/2] (3.25ns)   --->   "%B_1_load_5 = load i32* %B_1_addr_5, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 206 'load' 'B_1_load_5' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 5 <SV = 4> <Delay = 8.47>
+ST_5 : Operation 207 [1/1] (0.00ns)   --->   "%tmp_2_cast4 = zext i6 %j_mid2 to i9" [../matmul_gui/matmul.cpp:25]   --->   Operation 207 'zext' 'tmp_2_cast4' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 208 [1/1] (0.00ns)   --->   "%tmp_s = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 3, i6 %j_mid2)" [../matmul_gui/matmul.cpp:25]   --->   Operation 208 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 209 [1/1] (0.00ns)   --->   "%B_0_addr_6 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_s" [../matmul_gui/matmul.cpp:25]   --->   Operation 209 'getelementptr' 'B_0_addr_6' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 210 [1/1] (2.11ns)   --->   "%tmp_1 = add i9 %tmp_2_cast4, 224" [../matmul_gui/matmul.cpp:25]   --->   Operation 210 'add' 'tmp_1' <Predicate = (!exitcond_flatten)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 211 [1/1] (0.00ns)   --->   "%tmp_11_cast = zext i9 %tmp_1 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 211 'zext' 'tmp_11_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 212 [1/1] (0.00ns)   --->   "%B_0_addr_7 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_11_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 212 'getelementptr' 'B_0_addr_7' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 213 [1/1] (0.00ns)   --->   "%B_1_addr_6 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_s" [../matmul_gui/matmul.cpp:25]   --->   Operation 213 'getelementptr' 'B_1_addr_6' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 214 [1/1] (0.00ns)   --->   "%B_1_addr_7 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_11_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 214 'getelementptr' 'B_1_addr_7' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_5 : Operation 215 [1/1] (8.47ns)   --->   "%tmp_5_4 = mul nsw i32 %B_0_load_2, %A_4_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 215 'mul' 'tmp_5_4' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 216 [1/1] (8.47ns)   --->   "%tmp_5_5 = mul nsw i32 %B_1_load_2, %A_5_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 216 'mul' 'tmp_5_5' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 217 [1/1] (8.47ns)   --->   "%tmp_5_6 = mul nsw i32 %B_0_load_3, %A_6_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 217 'mul' 'tmp_5_6' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 218 [1/1] (8.47ns)   --->   "%tmp_5_7 = mul nsw i32 %B_1_load_3, %A_7_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 218 'mul' 'tmp_5_7' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 219 [1/2] (3.25ns)   --->   "%B_0_load_4 = load i32* %B_0_addr_4, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 219 'load' 'B_0_load_4' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 220 [1/2] (3.25ns)   --->   "%B_1_load_4 = load i32* %B_1_addr_4, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 220 'load' 'B_1_load_4' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 221 [1/2] (3.25ns)   --->   "%B_0_load_5 = load i32* %B_0_addr_5, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 221 'load' 'B_0_load_5' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 222 [1/2] (3.25ns)   --->   "%B_1_load_5 = load i32* %B_1_addr_5, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 222 'load' 'B_1_load_5' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 223 [2/2] (3.25ns)   --->   "%B_0_load_6 = load i32* %B_0_addr_6, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 223 'load' 'B_0_load_6' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 224 [2/2] (3.25ns)   --->   "%B_1_load_6 = load i32* %B_1_addr_6, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 224 'load' 'B_1_load_6' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 225 [2/2] (3.25ns)   --->   "%B_0_load_7 = load i32* %B_0_addr_7, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 225 'load' 'B_0_load_7' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 226 [2/2] (3.25ns)   --->   "%B_1_load_7 = load i32* %B_1_addr_7, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 226 'load' 'B_1_load_7' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_5 : Operation 227 [1/1] (2.70ns)   --->   "%tmp4 = add i32 %tmp_5_1, %tmp_5" [../matmul_gui/matmul.cpp:25]   --->   Operation 227 'add' 'tmp4' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 228 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp5 = add i32 %tmp_5_3, %tmp_5_2" [../matmul_gui/matmul.cpp:25]   --->   Operation 228 'add' 'tmp5' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 229 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp3 = add i32 %tmp4, %tmp5" [../matmul_gui/matmul.cpp:25]   --->   Operation 229 'add' 'tmp3' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 8.47>
+ST_6 : Operation 230 [1/1] (0.00ns)   --->   "%tmp_10 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 4, i6 %j_mid2)" [../matmul_gui/matmul.cpp:25]   --->   Operation 230 'bitconcatenate' 'tmp_10' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 231 [1/1] (0.00ns)   --->   "%B_0_addr_8 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_10" [../matmul_gui/matmul.cpp:25]   --->   Operation 231 'getelementptr' 'B_0_addr_8' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 232 [1/1] (2.11ns)   --->   "%tmp_11 = add i9 %tmp_2_cast4, -224" [../matmul_gui/matmul.cpp:25]   --->   Operation 232 'add' 'tmp_11' <Predicate = (!exitcond_flatten)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 233 [1/1] (0.00ns)   --->   "%tmp_13_cast = zext i9 %tmp_11 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 233 'zext' 'tmp_13_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 234 [1/1] (0.00ns)   --->   "%B_0_addr_9 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_13_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 234 'getelementptr' 'B_0_addr_9' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 235 [1/1] (0.00ns)   --->   "%B_1_addr_8 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_10" [../matmul_gui/matmul.cpp:25]   --->   Operation 235 'getelementptr' 'B_1_addr_8' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 236 [1/1] (0.00ns)   --->   "%B_1_addr_9 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_13_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 236 'getelementptr' 'B_1_addr_9' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_6 : Operation 237 [1/1] (8.47ns)   --->   "%tmp_5_8 = mul nsw i32 %B_0_load_4, %A_8_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 237 'mul' 'tmp_5_8' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 238 [1/1] (8.47ns)   --->   "%tmp_5_9 = mul nsw i32 %B_1_load_4, %A_9_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 238 'mul' 'tmp_5_9' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 239 [1/1] (8.47ns)   --->   "%tmp_5_s = mul nsw i32 %B_0_load_5, %A_10_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 239 'mul' 'tmp_5_s' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 240 [1/1] (8.47ns)   --->   "%tmp_5_10 = mul nsw i32 %B_1_load_5, %A_11_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 240 'mul' 'tmp_5_10' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 241 [1/2] (3.25ns)   --->   "%B_0_load_6 = load i32* %B_0_addr_6, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 241 'load' 'B_0_load_6' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 242 [1/2] (3.25ns)   --->   "%B_1_load_6 = load i32* %B_1_addr_6, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 242 'load' 'B_1_load_6' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 243 [1/2] (3.25ns)   --->   "%B_0_load_7 = load i32* %B_0_addr_7, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 243 'load' 'B_0_load_7' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 244 [1/2] (3.25ns)   --->   "%B_1_load_7 = load i32* %B_1_addr_7, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 244 'load' 'B_1_load_7' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 245 [2/2] (3.25ns)   --->   "%B_0_load_8 = load i32* %B_0_addr_8, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 245 'load' 'B_0_load_8' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 246 [2/2] (3.25ns)   --->   "%B_1_load_8 = load i32* %B_1_addr_8, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 246 'load' 'B_1_load_8' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 247 [2/2] (3.25ns)   --->   "%B_0_load_9 = load i32* %B_0_addr_9, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 247 'load' 'B_0_load_9' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 248 [2/2] (3.25ns)   --->   "%B_1_load_9 = load i32* %B_1_addr_9, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 248 'load' 'B_1_load_9' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 249 [1/1] (2.70ns)   --->   "%tmp7 = add i32 %tmp_5_5, %tmp_5_4" [../matmul_gui/matmul.cpp:25]   --->   Operation 249 'add' 'tmp7' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 250 [1/1] (2.70ns)   --->   "%tmp8 = add i32 %tmp_5_7, %tmp_5_6" [../matmul_gui/matmul.cpp:25]   --->   Operation 250 'add' 'tmp8' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 251 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp6 = add i32 %tmp7, %tmp8" [../matmul_gui/matmul.cpp:25]   --->   Operation 251 'add' 'tmp6' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 252 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp2 = add i32 %tmp3, %tmp6" [../matmul_gui/matmul.cpp:25]   --->   Operation 252 'add' 'tmp2' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 8.47>
+ST_7 : Operation 253 [1/1] (0.00ns)   --->   "%tmp_14 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 6, i6 %j_mid2)" [../matmul_gui/matmul.cpp:25]   --->   Operation 253 'bitconcatenate' 'tmp_14' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_7 : Operation 254 [1/1] (0.00ns)   --->   "%B_0_addr_12 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_14" [../matmul_gui/matmul.cpp:25]   --->   Operation 254 'getelementptr' 'B_0_addr_12' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_7 : Operation 255 [1/1] (0.00ns)   --->   "%tmp_17_cast7 = sext i8 %tmp_9 to i9" [../matmul_gui/matmul.cpp:25]   --->   Operation 255 'sext' 'tmp_17_cast7' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_7 : Operation 256 [1/1] (0.00ns)   --->   "%tmp_17_cast = zext i9 %tmp_17_cast7 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 256 'zext' 'tmp_17_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_7 : Operation 257 [1/1] (0.00ns)   --->   "%B_0_addr_13 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_17_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 257 'getelementptr' 'B_0_addr_13' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_7 : Operation 258 [1/1] (0.00ns)   --->   "%B_1_addr_12 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_14" [../matmul_gui/matmul.cpp:25]   --->   Operation 258 'getelementptr' 'B_1_addr_12' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_7 : Operation 259 [1/1] (0.00ns)   --->   "%B_1_addr_13 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_17_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 259 'getelementptr' 'B_1_addr_13' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_7 : Operation 260 [1/1] (8.47ns)   --->   "%tmp_5_11 = mul nsw i32 %B_0_load_6, %A_12_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 260 'mul' 'tmp_5_11' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 261 [1/1] (8.47ns)   --->   "%tmp_5_12 = mul nsw i32 %B_1_load_6, %A_13_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 261 'mul' 'tmp_5_12' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 262 [1/1] (8.47ns)   --->   "%tmp_5_13 = mul nsw i32 %B_0_load_7, %A_14_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 262 'mul' 'tmp_5_13' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 263 [1/1] (8.47ns)   --->   "%tmp_5_14 = mul nsw i32 %B_1_load_7, %A_15_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 263 'mul' 'tmp_5_14' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 264 [1/2] (3.25ns)   --->   "%B_0_load_8 = load i32* %B_0_addr_8, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 264 'load' 'B_0_load_8' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_7 : Operation 265 [1/2] (3.25ns)   --->   "%B_1_load_8 = load i32* %B_1_addr_8, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 265 'load' 'B_1_load_8' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_7 : Operation 266 [1/2] (3.25ns)   --->   "%B_0_load_9 = load i32* %B_0_addr_9, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 266 'load' 'B_0_load_9' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_7 : Operation 267 [1/2] (3.25ns)   --->   "%B_1_load_9 = load i32* %B_1_addr_9, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 267 'load' 'B_1_load_9' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_7 : Operation 268 [2/2] (3.25ns)   --->   "%B_0_load_12 = load i32* %B_0_addr_12, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 268 'load' 'B_0_load_12' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_7 : Operation 269 [2/2] (3.25ns)   --->   "%B_1_load_12 = load i32* %B_1_addr_12, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 269 'load' 'B_1_load_12' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_7 : Operation 270 [2/2] (3.25ns)   --->   "%B_0_load_13 = load i32* %B_0_addr_13, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 270 'load' 'B_0_load_13' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_7 : Operation 271 [2/2] (3.25ns)   --->   "%B_1_load_13 = load i32* %B_1_addr_13, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 271 'load' 'B_1_load_13' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_7 : Operation 272 [1/1] (2.70ns)   --->   "%tmp11 = add i32 %tmp_5_9, %tmp_5_8" [../matmul_gui/matmul.cpp:25]   --->   Operation 272 'add' 'tmp11' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 273 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp12 = add i32 %tmp_5_10, %tmp_5_s" [../matmul_gui/matmul.cpp:25]   --->   Operation 273 'add' 'tmp12' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 274 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp10 = add i32 %tmp11, %tmp12" [../matmul_gui/matmul.cpp:25]   --->   Operation 274 'add' 'tmp10' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 8.47>
+ST_8 : Operation 275 [1/1] (0.00ns)   --->   "%tmp_12 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 5, i6 %j_mid2)" [../matmul_gui/matmul.cpp:25]   --->   Operation 275 'bitconcatenate' 'tmp_12' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_8 : Operation 276 [1/1] (0.00ns)   --->   "%B_0_addr_10 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_12" [../matmul_gui/matmul.cpp:25]   --->   Operation 276 'getelementptr' 'B_0_addr_10' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_8 : Operation 277 [1/1] (2.11ns)   --->   "%tmp_13 = add i9 %tmp_2_cast4, -160" [../matmul_gui/matmul.cpp:25]   --->   Operation 277 'add' 'tmp_13' <Predicate = (!exitcond_flatten)> <Delay = 2.11> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 278 [1/1] (0.00ns)   --->   "%tmp_15_cast = zext i9 %tmp_13 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 278 'zext' 'tmp_15_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_8 : Operation 279 [1/1] (0.00ns)   --->   "%B_0_addr_11 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_15_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 279 'getelementptr' 'B_0_addr_11' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_8 : Operation 280 [1/1] (0.00ns)   --->   "%B_1_addr_10 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_12" [../matmul_gui/matmul.cpp:25]   --->   Operation 280 'getelementptr' 'B_1_addr_10' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_8 : Operation 281 [1/1] (0.00ns)   --->   "%B_1_addr_11 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_15_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 281 'getelementptr' 'B_1_addr_11' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_8 : Operation 282 [1/1] (8.47ns)   --->   "%tmp_5_15 = mul nsw i32 %B_0_load_8, %A_16_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 282 'mul' 'tmp_5_15' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 283 [1/1] (8.47ns)   --->   "%tmp_5_16 = mul nsw i32 %B_1_load_8, %A_17_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 283 'mul' 'tmp_5_16' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 284 [1/1] (8.47ns)   --->   "%tmp_5_17 = mul nsw i32 %B_0_load_9, %A_18_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 284 'mul' 'tmp_5_17' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 285 [1/1] (8.47ns)   --->   "%tmp_5_18 = mul nsw i32 %B_1_load_9, %A_19_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 285 'mul' 'tmp_5_18' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 286 [2/2] (3.25ns)   --->   "%B_0_load_10 = load i32* %B_0_addr_10, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 286 'load' 'B_0_load_10' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_8 : Operation 287 [2/2] (3.25ns)   --->   "%B_1_load_10 = load i32* %B_1_addr_10, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 287 'load' 'B_1_load_10' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_8 : Operation 288 [2/2] (3.25ns)   --->   "%B_0_load_11 = load i32* %B_0_addr_11, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 288 'load' 'B_0_load_11' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_8 : Operation 289 [2/2] (3.25ns)   --->   "%B_1_load_11 = load i32* %B_1_addr_11, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 289 'load' 'B_1_load_11' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_8 : Operation 290 [1/2] (3.25ns)   --->   "%B_0_load_12 = load i32* %B_0_addr_12, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 290 'load' 'B_0_load_12' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_8 : Operation 291 [1/2] (3.25ns)   --->   "%B_1_load_12 = load i32* %B_1_addr_12, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 291 'load' 'B_1_load_12' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_8 : Operation 292 [1/2] (3.25ns)   --->   "%B_0_load_13 = load i32* %B_0_addr_13, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 292 'load' 'B_0_load_13' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_8 : Operation 293 [1/2] (3.25ns)   --->   "%B_1_load_13 = load i32* %B_1_addr_13, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 293 'load' 'B_1_load_13' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_8 : Operation 294 [1/1] (2.70ns)   --->   "%tmp14 = add i32 %tmp_5_12, %tmp_5_11" [../matmul_gui/matmul.cpp:25]   --->   Operation 294 'add' 'tmp14' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 295 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp15 = add i32 %tmp_5_14, %tmp_5_13" [../matmul_gui/matmul.cpp:25]   --->   Operation 295 'add' 'tmp15' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 296 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp13 = add i32 %tmp14, %tmp15" [../matmul_gui/matmul.cpp:25]   --->   Operation 296 'add' 'tmp13' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 9 <SV = 8> <Delay = 8.47>
+ST_9 : Operation 297 [1/1] (0.00ns)   --->   "%tmp_2_cast5 = zext i6 %j_mid2 to i10" [../matmul_gui/matmul.cpp:25]   --->   Operation 297 'zext' 'tmp_2_cast5' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_9 : Operation 298 [1/1] (0.00ns)   --->   "%tmp_15 = call i64 @_ssdm_op_BitConcatenate.i64.i58.i6(i58 7, i6 %j_mid2)" [../matmul_gui/matmul.cpp:25]   --->   Operation 298 'bitconcatenate' 'tmp_15' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_9 : Operation 299 [1/1] (0.00ns)   --->   "%B_0_addr_14 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_15" [../matmul_gui/matmul.cpp:25]   --->   Operation 299 'getelementptr' 'B_0_addr_14' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_9 : Operation 300 [1/1] (2.12ns)   --->   "%tmp_16 = add i10 %tmp_2_cast5, 480" [../matmul_gui/matmul.cpp:25]   --->   Operation 300 'add' 'tmp_16' <Predicate = (!exitcond_flatten)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 301 [1/1] (0.00ns)   --->   "%tmp_19_cast = zext i10 %tmp_16 to i64" [../matmul_gui/matmul.cpp:25]   --->   Operation 301 'zext' 'tmp_19_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_9 : Operation 302 [1/1] (0.00ns)   --->   "%B_0_addr_15 = getelementptr [512 x i32]* %B_0, i64 0, i64 %tmp_19_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 302 'getelementptr' 'B_0_addr_15' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_9 : Operation 303 [1/1] (0.00ns)   --->   "%B_1_addr_14 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_15" [../matmul_gui/matmul.cpp:25]   --->   Operation 303 'getelementptr' 'B_1_addr_14' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_9 : Operation 304 [1/1] (0.00ns)   --->   "%B_1_addr_15 = getelementptr [512 x i32]* %B_1, i64 0, i64 %tmp_19_cast" [../matmul_gui/matmul.cpp:25]   --->   Operation 304 'getelementptr' 'B_1_addr_15' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_9 : Operation 305 [1/2] (3.25ns)   --->   "%B_0_load_10 = load i32* %B_0_addr_10, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 305 'load' 'B_0_load_10' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_9 : Operation 306 [1/2] (3.25ns)   --->   "%B_1_load_10 = load i32* %B_1_addr_10, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 306 'load' 'B_1_load_10' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_9 : Operation 307 [1/2] (3.25ns)   --->   "%B_0_load_11 = load i32* %B_0_addr_11, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 307 'load' 'B_0_load_11' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_9 : Operation 308 [1/2] (3.25ns)   --->   "%B_1_load_11 = load i32* %B_1_addr_11, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 308 'load' 'B_1_load_11' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_9 : Operation 309 [1/1] (8.47ns)   --->   "%tmp_5_23 = mul nsw i32 %B_0_load_12, %A_24_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 309 'mul' 'tmp_5_23' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 310 [1/1] (8.47ns)   --->   "%tmp_5_24 = mul nsw i32 %B_1_load_12, %A_25_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 310 'mul' 'tmp_5_24' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 311 [1/1] (8.47ns)   --->   "%tmp_5_25 = mul nsw i32 %B_0_load_13, %A_26_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 311 'mul' 'tmp_5_25' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 312 [1/1] (8.47ns)   --->   "%tmp_5_26 = mul nsw i32 %B_1_load_13, %A_27_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 312 'mul' 'tmp_5_26' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 313 [2/2] (3.25ns)   --->   "%B_0_load_14 = load i32* %B_0_addr_14, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 313 'load' 'B_0_load_14' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_9 : Operation 314 [2/2] (3.25ns)   --->   "%B_1_load_14 = load i32* %B_1_addr_14, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 314 'load' 'B_1_load_14' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_9 : Operation 315 [2/2] (3.25ns)   --->   "%B_0_load_15 = load i32* %B_0_addr_15, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 315 'load' 'B_0_load_15' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_9 : Operation 316 [2/2] (3.25ns)   --->   "%B_1_load_15 = load i32* %B_1_addr_15, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 316 'load' 'B_1_load_15' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_9 : Operation 317 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp9 = add i32 %tmp10, %tmp13" [../matmul_gui/matmul.cpp:25]   --->   Operation 317 'add' 'tmp9' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 318 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp1 = add i32 %tmp2, %tmp9" [../matmul_gui/matmul.cpp:25]   --->   Operation 318 'add' 'tmp1' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 319 [1/1] (2.70ns)   --->   "%tmp19 = add i32 %tmp_5_16, %tmp_5_15" [../matmul_gui/matmul.cpp:25]   --->   Operation 319 'add' 'tmp19' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 320 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp20 = add i32 %tmp_5_18, %tmp_5_17" [../matmul_gui/matmul.cpp:25]   --->   Operation 320 'add' 'tmp20' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 321 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp18 = add i32 %tmp19, %tmp20" [../matmul_gui/matmul.cpp:25]   --->   Operation 321 'add' 'tmp18' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_9 : Operation 322 [1/1] (1.94ns)   --->   "%j_1 = add i6 %j_mid2, 1" [../matmul_gui/matmul.cpp:17]   --->   Operation 322 'add' 'j_1' <Predicate = (!exitcond_flatten)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 8.47>
+ST_10 : Operation 323 [1/1] (8.47ns)   --->   "%tmp_5_19 = mul nsw i32 %B_0_load_10, %A_20_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 323 'mul' 'tmp_5_19' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 324 [1/1] (8.47ns)   --->   "%tmp_5_20 = mul nsw i32 %B_1_load_10, %A_21_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 324 'mul' 'tmp_5_20' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 325 [1/1] (8.47ns)   --->   "%tmp_5_21 = mul nsw i32 %B_0_load_11, %A_22_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 325 'mul' 'tmp_5_21' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 326 [1/1] (8.47ns)   --->   "%tmp_5_22 = mul nsw i32 %B_1_load_11, %A_23_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 326 'mul' 'tmp_5_22' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 327 [1/2] (3.25ns)   --->   "%B_0_load_14 = load i32* %B_0_addr_14, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 327 'load' 'B_0_load_14' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_10 : Operation 328 [1/2] (3.25ns)   --->   "%B_1_load_14 = load i32* %B_1_addr_14, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 328 'load' 'B_1_load_14' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_10 : Operation 329 [1/2] (3.25ns)   --->   "%B_0_load_15 = load i32* %B_0_addr_15, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 329 'load' 'B_0_load_15' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_10 : Operation 330 [1/2] (3.25ns)   --->   "%B_1_load_15 = load i32* %B_1_addr_15, align 4" [../matmul_gui/matmul.cpp:25]   --->   Operation 330 'load' 'B_1_load_15' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_10 : Operation 331 [1/1] (2.70ns)   --->   "%tmp26 = add i32 %tmp_5_24, %tmp_5_23" [../matmul_gui/matmul.cpp:25]   --->   Operation 331 'add' 'tmp26' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 332 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp27 = add i32 %tmp_5_26, %tmp_5_25" [../matmul_gui/matmul.cpp:25]   --->   Operation 332 'add' 'tmp27' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 333 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp25 = add i32 %tmp26, %tmp27" [../matmul_gui/matmul.cpp:25]   --->   Operation 333 'add' 'tmp25' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 11 <SV = 10> <Delay = 8.47>
+ST_11 : Operation 334 [1/1] (8.47ns)   --->   "%tmp_5_27 = mul nsw i32 %B_0_load_14, %A_28_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 334 'mul' 'tmp_5_27' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 335 [1/1] (8.47ns)   --->   "%tmp_5_28 = mul nsw i32 %B_1_load_14, %A_29_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 335 'mul' 'tmp_5_28' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 336 [1/1] (8.47ns)   --->   "%tmp_5_29 = mul nsw i32 %B_0_load_15, %A_30_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 336 'mul' 'tmp_5_29' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 337 [1/1] (8.47ns)   --->   "%tmp_5_30 = mul nsw i32 %B_1_load_15, %A_31_load" [../matmul_gui/matmul.cpp:25]   --->   Operation 337 'mul' 'tmp_5_30' <Predicate = (!exitcond_flatten)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 338 [1/1] (2.70ns)   --->   "%tmp22 = add i32 %tmp_5_20, %tmp_5_19" [../matmul_gui/matmul.cpp:25]   --->   Operation 338 'add' 'tmp22' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 339 [1/1] (2.70ns)   --->   "%tmp23 = add i32 %tmp_5_22, %tmp_5_21" [../matmul_gui/matmul.cpp:25]   --->   Operation 339 'add' 'tmp23' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 340 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp21 = add i32 %tmp22, %tmp23" [../matmul_gui/matmul.cpp:25]   --->   Operation 340 'add' 'tmp21' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 341 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp17 = add i32 %tmp18, %tmp21" [../matmul_gui/matmul.cpp:25]   --->   Operation 341 'add' 'tmp17' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 12 <SV = 11> <Delay = 7.20>
+ST_12 : Operation 342 [1/1] (2.70ns)   --->   "%tmp29 = add i32 %tmp_5_28, %tmp_5_27" [../matmul_gui/matmul.cpp:25]   --->   Operation 342 'add' 'tmp29' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 343 [1/1] (2.70ns)   --->   "%tmp30 = add i32 %tmp_5_30, %tmp_5_29" [../matmul_gui/matmul.cpp:25]   --->   Operation 343 'add' 'tmp30' <Predicate = (!exitcond_flatten)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 344 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp28 = add i32 %tmp29, %tmp30" [../matmul_gui/matmul.cpp:25]   --->   Operation 344 'add' 'tmp28' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_12 : Operation 345 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%tmp24 = add i32 %tmp25, %tmp28" [../matmul_gui/matmul.cpp:25]   --->   Operation 345 'add' 'tmp24' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 13 <SV = 12> <Delay = 7.76>
+ST_13 : Operation 346 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @I_J_str)"   --->   Operation 346 'specloopname' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 347 [1/1] (0.00ns)   --->   "%tmp = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %tmp_mid2_v, i5 0)" [../matmul_gui/matmul.cpp:25]   --->   Operation 347 'bitconcatenate' 'tmp' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 348 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i11 %tmp to i12" [../matmul_gui/matmul.cpp:18]   --->   Operation 348 'zext' 'tmp_1_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 349 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([2 x i8]* @p_str4) nounwind" [../matmul_gui/matmul.cpp:18]   --->   Operation 349 'specloopname' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 350 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([2 x i8]* @p_str4) nounwind" [../matmul_gui/matmul.cpp:18]   --->   Operation 350 'specregionbegin' 'tmp_3' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 351 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str2) nounwind" [../matmul_gui/matmul.cpp:19]   --->   Operation 351 'specpipeline' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 352 [1/1] (0.00ns)   --->   "%tmp_2_cast6 = zext i6 %j_mid2 to i12" [../matmul_gui/matmul.cpp:25]   --->   Operation 352 'zext' 'tmp_2_cast6' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 353 [1/1] (2.12ns)   --->   "%tmp_17 = add i12 %tmp_1_cast, %tmp_2_cast6" [../matmul_gui/matmul.cpp:27]   --->   Operation 353 'add' 'tmp_17' <Predicate = (!exitcond_flatten)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.94> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 354 [1/1] (0.00ns)   --->   "%tmp_20_cast = zext i12 %tmp_17 to i64" [../matmul_gui/matmul.cpp:27]   --->   Operation 354 'zext' 'tmp_20_cast' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 355 [1/1] (0.00ns)   --->   "%C_addr = getelementptr [1024 x i32]* %C, i64 0, i64 %tmp_20_cast" [../matmul_gui/matmul.cpp:27]   --->   Operation 355 'getelementptr' 'C_addr' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 356 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp16 = add i32 %tmp17, %tmp24" [../matmul_gui/matmul.cpp:25]   --->   Operation 356 'add' 'tmp16' <Predicate = (!exitcond_flatten)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 357 [1/1] (4.50ns) (root node of TernaryAdder)   --->   "%sum_1_s = add nsw i32 %tmp1, %tmp16" [../matmul_gui/matmul.cpp:25]   --->   Operation 357 'add' 'sum_1_s' <Predicate = (!exitcond_flatten)> <Delay = 4.50> <Core = "TAddSub">   --->   Core 84 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.25> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_13 : Operation 358 [1/1] (3.25ns)   --->   "store i32 %sum_1_s, i32* %C_addr, align 4" [../matmul_gui/matmul.cpp:27]   --->   Operation 358 'store' <Predicate = (!exitcond_flatten)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_13 : Operation 359 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([2 x i8]* @p_str4, i32 %tmp_3) nounwind" [../matmul_gui/matmul.cpp:28]   --->   Operation 359 'specregionend' 'empty_2' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+ST_13 : Operation 360 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 360 'br' <Predicate = (!exitcond_flatten)> <Delay = 0.00>
+
+State 14 <SV = 2> <Delay = 0.00>
+ST_14 : Operation 361 [1/1] (0.00ns)   --->   "ret void" [../matmul_gui/matmul.cpp:30]   --->   Operation 361 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [74]  (1.66 ns)
+
+ <State 2>: 7.41ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', ../matmul_gui/matmul.cpp:17) [76]  (0 ns)
+	'icmp' operation ('exitcond', ../matmul_gui/matmul.cpp:17) [84]  (1.46 ns)
+	'select' operation ('j_mid2', ../matmul_gui/matmul.cpp:17) [85]  (0.669 ns)
+	'add' operation ('tmp_4', ../matmul_gui/matmul.cpp:25) [100]  (2.03 ns)
+	'getelementptr' operation ('B_0_addr_1', ../matmul_gui/matmul.cpp:25) [102]  (0 ns)
+	'load' operation ('B_0_load_1', ../matmul_gui/matmul.cpp:25) on array 'B_0' [167]  (3.26 ns)
+
+ <State 3>: 5.37ns
+The critical path consists of the following:
+	'add' operation ('tmp_7', ../matmul_gui/matmul.cpp:25) [105]  (2.12 ns)
+	'getelementptr' operation ('B_0_addr_3', ../matmul_gui/matmul.cpp:25) [107]  (0 ns)
+	'load' operation ('B_0_load_3', ../matmul_gui/matmul.cpp:25) on array 'B_0' [183]  (3.26 ns)
+
+ <State 4>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5', ../matmul_gui/matmul.cpp:25) [160]  (8.47 ns)
+
+ <State 5>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_4', ../matmul_gui/matmul.cpp:25) [176]  (8.47 ns)
+
+ <State 6>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_8', ../matmul_gui/matmul.cpp:25) [192]  (8.47 ns)
+
+ <State 7>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_11', ../matmul_gui/matmul.cpp:25) [208]  (8.47 ns)
+
+ <State 8>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_15', ../matmul_gui/matmul.cpp:25) [224]  (8.47 ns)
+
+ <State 9>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_23', ../matmul_gui/matmul.cpp:25) [256]  (8.47 ns)
+
+ <State 10>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_19', ../matmul_gui/matmul.cpp:25) [240]  (8.47 ns)
+
+ <State 11>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5_27', ../matmul_gui/matmul.cpp:25) [272]  (8.47 ns)
+
+ <State 12>: 7.21ns
+The critical path consists of the following:
+	'add' operation ('tmp29', ../matmul_gui/matmul.cpp:25) [310]  (2.7 ns)
+	'add' operation ('tmp28', ../matmul_gui/matmul.cpp:25) [312]  (0 ns)
+	'add' operation ('tmp24', ../matmul_gui/matmul.cpp:25) [313]  (4.5 ns)
+
+ <State 13>: 7.76ns
+The critical path consists of the following:
+	'add' operation ('tmp16', ../matmul_gui/matmul.cpp:25) [314]  (0 ns)
+	'add' operation ('sum_1_s', ../matmul_gui/matmul.cpp:25) [315]  (4.5 ns)
+	'store' operation (../matmul_gui/matmul.cpp:27) of variable 'sum_1_s', ../matmul_gui/matmul.cpp:25 on array 'C' [316]  (3.26 ns)
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

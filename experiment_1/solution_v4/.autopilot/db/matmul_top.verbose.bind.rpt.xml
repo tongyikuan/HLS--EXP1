@@ -1,0 +1,49 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'matmul_top'" level="0">
+<item name = "Date">Tue Nov  3 21:10:01 2026
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">experiment_1</item>
+<item name = "Solution">solution_v4</item>
+<item name = "Product family">artix7</item>
+<item name = "Target device">xc7a100tcsg324-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.470, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2061, 2061, 1032, 1032, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_load_B_fu_290">load_B, 514, 514, 514, 514, none</column>
+<column name="grp_matmul_core_fu_360">matmul_core, 1031, 1031, 1031, 1031, none</column>
+<column name="grp_store_fu_429">store, 514, 514, 514, 514, none</column>
+<column name="grp_load_A_fu_436">load_A, 514, 514, 514, 514, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

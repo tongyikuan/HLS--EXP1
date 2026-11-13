@@ -1,0 +1,240 @@
+
+
+================================================================
+== Vivado HLS Report for 'matmul_top'
+================================================================
+* Date:           Mon Nov  2 11:06:31 2026
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        experiment_1
+* Solution:       solution2
+* Product family: artix7
+* Target device:  xc7a100tcsg324-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.470|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  32773|  32773|  32773|  32773|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+        |          |    Latency    | Iteration|  Initiation Interval  |  Trip |          |
+        | Loop Name|  min  |  max  |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+        |- I_J_K   |  32771|  32771|         5|          1|          1|  32768|    yes   |
+        +----------+-------+-------+----------+-----------+-----------+-------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 2 3 4 5 6 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	7  / (exitcond_flatten1)
+	3  / (!exitcond_flatten1)
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	2  / true
+7 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.66>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %A) nounwind, !map !7"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %B) nounwind, !map !13"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1024 x i32]* %C) nounwind, !map !17"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @matmul_top_str) nounwind"   --->   Operation 11 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (1.66ns)   --->   "br label %1" [../matmul_gui/matmul.cpp:13]   --->   Operation 12 'br' <Predicate = true> <Delay = 1.66>
+
+State 2 <SV = 1> <Delay = 6.49>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%indvar_flatten1 = phi i16 [ 0, %0 ], [ %indvar_flatten_next1, %ifFalse ]"   --->   Operation 13 'phi' 'indvar_flatten1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "%i = phi i6 [ 0, %0 ], [ %tmp_mid2_v, %ifFalse ]" [../matmul_gui/matmul.cpp:21]   --->   Operation 14 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "%indvar_flatten = phi i12 [ 0, %0 ], [ %indvar_flatten_next, %ifFalse ]"   --->   Operation 15 'phi' 'indvar_flatten' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "%j = phi i6 [ 0, %0 ], [ %tmp_2_mid2, %ifFalse ]" [../matmul_gui/matmul.cpp:21]   --->   Operation 16 'phi' 'j' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "%sum = phi i32 [ 0, %0 ], [ %sum_1, %ifFalse ]"   --->   Operation 17 'phi' 'sum' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%k = phi i6 [ 0, %0 ], [ %k_1, %ifFalse ]"   --->   Operation 18 'phi' 'k' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (2.38ns)   --->   "%exitcond_flatten1 = icmp eq i16 %indvar_flatten1, -32768"   --->   Operation 19 'icmp' 'exitcond_flatten1' <Predicate = true> <Delay = 2.38> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 32768, i64 32768, i64 32768) nounwind"   --->   Operation 20 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (2.14ns)   --->   "%indvar_flatten_next1 = add i16 %indvar_flatten1, 1"   --->   Operation 21 'add' 'indvar_flatten_next1' <Predicate = true> <Delay = 2.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "br i1 %exitcond_flatten1, label %2, label %.reset6"   --->   Operation 22 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (1.94ns)   --->   "%i_1 = add i6 %i, 1" [../matmul_gui/matmul.cpp:13]   --->   Operation 23 'add' 'i_1' <Predicate = (!exitcond_flatten1)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (1.92ns)   --->   "%exitcond_flatten8 = icmp eq i12 %indvar_flatten, 1024"   --->   Operation 24 'icmp' 'exitcond_flatten8' <Predicate = (!exitcond_flatten1)> <Delay = 1.92> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 25 [1/1] (0.66ns)   --->   "%j_mid = select i1 %exitcond_flatten8, i6 0, i6 %j" [../matmul_gui/matmul.cpp:21]   --->   Operation 25 'select' 'j_mid' <Predicate = (!exitcond_flatten1)> <Delay = 0.66> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.66ns)   --->   "%tmp_mid2_v = select i1 %exitcond_flatten8, i6 %i_1, i6 %i" [../matmul_gui/matmul.cpp:21]   --->   Operation 26 'select' 'tmp_mid2_v' <Predicate = (!exitcond_flatten1)> <Delay = 0.66> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.00ns) (grouped into LUT with out node exitcond_mid)   --->   "%not_exitcond_flatten = xor i1 %exitcond_flatten8, true" [../matmul_gui/matmul.cpp:18]   --->   Operation 27 'xor' 'not_exitcond_flatten' <Predicate = (!exitcond_flatten1)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (1.45ns)   --->   "%exitcond = icmp eq i6 %k, -32" [../matmul_gui/matmul.cpp:18]   --->   Operation 28 'icmp' 'exitcond' <Predicate = (!exitcond_flatten1)> <Delay = 1.45> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.97ns) (out node of the LUT)   --->   "%exitcond_mid = and i1 %exitcond, %not_exitcond_flatten" [../matmul_gui/matmul.cpp:18]   --->   Operation 29 'and' 'exitcond_mid' <Predicate = (!exitcond_flatten1)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (1.94ns)   --->   "%j_1 = add i6 %j_mid, 1" [../matmul_gui/matmul.cpp:15]   --->   Operation 30 'add' 'j_1' <Predicate = (!exitcond_flatten1)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 31 [1/1] (0.97ns)   --->   "%tmp_3 = or i1 %exitcond_mid, %exitcond_flatten8" [../matmul_gui/matmul.cpp:18]   --->   Operation 31 'or' 'tmp_3' <Predicate = (!exitcond_flatten1)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.66ns)   --->   "%k_mid2 = select i1 %tmp_3, i6 0, i6 %k" [../matmul_gui/matmul.cpp:18]   --->   Operation 32 'select' 'k_mid2' <Predicate = (!exitcond_flatten1)> <Delay = 0.66> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 33 [1/1] (0.66ns)   --->   "%tmp_2_mid2 = select i1 %exitcond_mid, i6 %j_1, i6 %j_mid" [../matmul_gui/matmul.cpp:21]   --->   Operation 33 'select' 'tmp_2_mid2' <Predicate = (!exitcond_flatten1)> <Delay = 0.66> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (1.94ns)   --->   "%k_1 = add i6 %k_mid2, 1" [../matmul_gui/matmul.cpp:18]   --->   Operation 34 'add' 'k_1' <Predicate = (!exitcond_flatten1)> <Delay = 1.94> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (2.13ns)   --->   "%indvar_flatten_op = add i12 %indvar_flatten, 1"   --->   Operation 35 'add' 'indvar_flatten_op' <Predicate = (!exitcond_flatten1)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.68ns)   --->   "%indvar_flatten_next = select i1 %exitcond_flatten8, i12 1, i12 %indvar_flatten_op"   --->   Operation 36 'select' 'indvar_flatten_next' <Predicate = (!exitcond_flatten1)> <Delay = 0.68> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 5.38>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %tmp_mid2_v, i5 0)" [../matmul_gui/matmul.cpp:21]   --->   Operation 37 'bitconcatenate' 'tmp' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i11 %tmp to i12" [../matmul_gui/matmul.cpp:21]   --->   Operation 38 'zext' 'tmp_1_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_2_mid2_cast = zext i6 %tmp_2_mid2 to i12" [../matmul_gui/matmul.cpp:21]   --->   Operation 39 'zext' 'tmp_2_mid2_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (2.12ns)   --->   "%tmp_8 = add i12 %tmp_2_mid2_cast, %tmp_1_cast" [../matmul_gui/matmul.cpp:23]   --->   Operation 40 'add' 'tmp_8' <Predicate = (!exitcond_flatten1)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_8_cast = zext i12 %tmp_8 to i64" [../matmul_gui/matmul.cpp:23]   --->   Operation 41 'zext' 'tmp_8_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%C_addr = getelementptr [1024 x i32]* %C, i64 0, i64 %tmp_8_cast" [../matmul_gui/matmul.cpp:23]   --->   Operation 42 'getelementptr' 'C_addr' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_4_cast = zext i6 %k_mid2 to i12" [../matmul_gui/matmul.cpp:21]   --->   Operation 43 'zext' 'tmp_4_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (2.12ns)   --->   "%tmp_9 = add i12 %tmp_4_cast, %tmp_1_cast" [../matmul_gui/matmul.cpp:21]   --->   Operation 44 'add' 'tmp_9' <Predicate = (!exitcond_flatten1)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i12 %tmp_9 to i64" [../matmul_gui/matmul.cpp:21]   --->   Operation 45 'zext' 'tmp_9_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%A_addr = getelementptr [1024 x i32]* %A, i64 0, i64 %tmp_9_cast" [../matmul_gui/matmul.cpp:21]   --->   Operation 46 'getelementptr' 'A_addr' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 47 [1/1] (0.00ns)   --->   "%tmp_s = call i11 @_ssdm_op_BitConcatenate.i11.i6.i5(i6 %k_mid2, i5 0)" [../matmul_gui/matmul.cpp:18]   --->   Operation 47 'bitconcatenate' 'tmp_s' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_11_cast = zext i11 %tmp_s to i12" [../matmul_gui/matmul.cpp:21]   --->   Operation 48 'zext' 'tmp_11_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 49 [1/1] (2.12ns)   --->   "%tmp_1 = add i12 %tmp_2_mid2_cast, %tmp_11_cast" [../matmul_gui/matmul.cpp:21]   --->   Operation 49 'add' 'tmp_1' <Predicate = (!exitcond_flatten1)> <Delay = 2.12> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_12_cast = zext i12 %tmp_1 to i64" [../matmul_gui/matmul.cpp:21]   --->   Operation 50 'zext' 'tmp_12_cast' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 51 [1/1] (0.00ns)   --->   "%B_addr = getelementptr [1024 x i32]* %B, i64 0, i64 %tmp_12_cast" [../matmul_gui/matmul.cpp:21]   --->   Operation 51 'getelementptr' 'B_addr' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_3 : Operation 52 [2/2] (3.25ns)   --->   "%A_load = load i32* %A_addr, align 4" [../matmul_gui/matmul.cpp:21]   --->   Operation 52 'load' 'A_load' <Predicate = (!exitcond_flatten1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 53 [2/2] (3.25ns)   --->   "%B_load = load i32* %B_addr, align 4" [../matmul_gui/matmul.cpp:21]   --->   Operation 53 'load' 'B_load' <Predicate = (!exitcond_flatten1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_3 : Operation 54 [1/1] (1.45ns)   --->   "%ifzero = icmp eq i6 %k_1, -32" [../matmul_gui/matmul.cpp:18]   --->   Operation 54 'icmp' 'ifzero' <Predicate = (!exitcond_flatten1)> <Delay = 1.45> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.45> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 55 [1/1] (0.00ns)   --->   "br i1 %ifzero, label %ifTrue, label %ifFalse" [../matmul_gui/matmul.cpp:18]   --->   Operation 55 'br' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 56 [1/2] (3.25ns)   --->   "%A_load = load i32* %A_addr, align 4" [../matmul_gui/matmul.cpp:21]   --->   Operation 56 'load' 'A_load' <Predicate = (!exitcond_flatten1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_4 : Operation 57 [1/2] (3.25ns)   --->   "%B_load = load i32* %B_addr, align 4" [../matmul_gui/matmul.cpp:21]   --->   Operation 57 'load' 'B_load' <Predicate = (!exitcond_flatten1)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+
+State 5 <SV = 4> <Delay = 8.47>
+ST_5 : Operation 58 [1/1] (8.47ns)   --->   "%tmp_5 = mul nsw i32 %A_load, %B_load" [../matmul_gui/matmul.cpp:21]   --->   Operation 58 'mul' 'tmp_5' <Predicate = (!exitcond_flatten1)> <Delay = 8.47> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.47> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 5.95>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([6 x i8]* @I_J_K_str)"   --->   Operation 59 'specloopname' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([4 x i8]* @J_K_str)"   --->   Operation 60 'specloopname' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_6 : Operation 61 [1/1] (0.00ns) (grouped into LUT with out node sum_1)   --->   "%sum_mid2 = select i1 %tmp_3, i32 0, i32 %sum" [../matmul_gui/matmul.cpp:18]   --->   Operation 61 'select' 'sum_mid2' <Predicate = (!exitcond_flatten1)> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.68> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([2 x i8]* @p_str2) nounwind" [../matmul_gui/matmul.cpp:19]   --->   Operation 62 'specloopname' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_6 = call i32 (...)* @_ssdm_op_SpecRegionBegin([2 x i8]* @p_str2) nounwind" [../matmul_gui/matmul.cpp:19]   --->   Operation 63 'specregionbegin' 'tmp_6' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind" [../matmul_gui/matmul.cpp:20]   --->   Operation 64 'specpipeline' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (2.70ns) (out node of the LUT)   --->   "%sum_1 = add nsw i32 %tmp_5, %sum_mid2" [../matmul_gui/matmul.cpp:21]   --->   Operation 65 'add' 'sum_1' <Predicate = (!exitcond_flatten1)> <Delay = 2.70> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.13> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 66 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecRegionEnd([2 x i8]* @p_str2, i32 %tmp_6) nounwind" [../matmul_gui/matmul.cpp:22]   --->   Operation 66 'specregionend' 'empty_2' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+ST_6 : Operation 67 [1/1] (3.25ns)   --->   "store i32 %sum_1, i32* %C_addr, align 4" [../matmul_gui/matmul.cpp:23]   --->   Operation 67 'store' <Predicate = (ifzero)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1024> <RAM>
+ST_6 : Operation 68 [1/1] (0.00ns)   --->   "br label %ifFalse"   --->   Operation 68 'br' <Predicate = (ifzero)> <Delay = 0.00>
+ST_6 : Operation 69 [1/1] (0.00ns)   --->   "br label %1"   --->   Operation 69 'br' <Predicate = (!exitcond_flatten1)> <Delay = 0.00>
+
+State 7 <SV = 2> <Delay = 0.00>
+ST_7 : Operation 70 [1/1] (0.00ns)   --->   "ret void" [../matmul_gui/matmul.cpp:26]   --->   Operation 70 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.66ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('indvar_flatten1') with incoming values : ('indvar_flatten_next1') [10]  (1.66 ns)
+
+ <State 2>: 6.5ns
+The critical path consists of the following:
+	'phi' operation ('indvar_flatten') with incoming values : ('indvar_flatten_next') [12]  (0 ns)
+	'icmp' operation ('exitcond_flatten8') [23]  (1.93 ns)
+	'xor' operation ('not_exitcond_flatten', ../matmul_gui/matmul.cpp:18) [28]  (0 ns)
+	'and' operation ('exitcond_mid', ../matmul_gui/matmul.cpp:18) [30]  (0.978 ns)
+	'or' operation ('tmp_3', ../matmul_gui/matmul.cpp:18) [33]  (0.978 ns)
+	'select' operation ('k_mid2', ../matmul_gui/matmul.cpp:18) [35]  (0.669 ns)
+	'add' operation ('k', ../matmul_gui/matmul.cpp:18) [58]  (1.95 ns)
+
+ <State 3>: 5.38ns
+The critical path consists of the following:
+	'add' operation ('tmp_9', ../matmul_gui/matmul.cpp:21) [45]  (2.13 ns)
+	'getelementptr' operation ('A_addr', ../matmul_gui/matmul.cpp:21) [47]  (0 ns)
+	'load' operation ('A_load', ../matmul_gui/matmul.cpp:21) on array 'A' [53]  (3.26 ns)
+
+ <State 4>: 3.26ns
+The critical path consists of the following:
+	'load' operation ('A_load', ../matmul_gui/matmul.cpp:21) on array 'A' [53]  (3.26 ns)
+
+ <State 5>: 8.47ns
+The critical path consists of the following:
+	'mul' operation ('tmp_5', ../matmul_gui/matmul.cpp:21) [55]  (8.47 ns)
+
+ <State 6>: 5.96ns
+The critical path consists of the following:
+	'select' operation ('sum_mid2', ../matmul_gui/matmul.cpp:18) [34]  (0 ns)
+	'add' operation ('sum', ../matmul_gui/matmul.cpp:21) [56]  (2.7 ns)
+	'store' operation (../matmul_gui/matmul.cpp:23) of variable 'sum', ../matmul_gui/matmul.cpp:21 on array 'C' [62]  (3.26 ns)
+
+ <State 7>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A
